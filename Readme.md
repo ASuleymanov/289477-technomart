@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Alexander Suleymanov](https://up.htmlacademy.ru/htmlcss/15/user/289477).
-* Наставник: `Неизвестно`.
+* Наставник: [Liza Pozdnyakova]](https://up.htmlacademy.ru/htmlcss/15/user/5608).
 
 ---
 
