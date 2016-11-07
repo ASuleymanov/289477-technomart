@@ -3,7 +3,7 @@ body {
   line-height: 12px;
   color: currentColor;
   font-weight:normal;
-  font-family: "Times New Roman", serif;
+  font-family: "Cuprum", serif;
 }
 
 h1 {
@@ -11,12 +11,12 @@ h1 {
   line-height: normal;
   color: currentColor;
   font-weight: bold;
-  font-family: "Arial", serif;
+  font-family: "PT Sans", serif;
 }
 h2 {
   font-size: 18px;
   line-height: normal;
   color:currentColor;
   font-weight: bold;
-  font-family: "Arial",serif;
+  font-family: "PT Sans", serif;
 }
