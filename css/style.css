@@ -1,22 +1,367 @@
-body {
-  font-size: 12px;
-  line-height: 12px;
-  color: currentColor;
-  font-weight:normal;
-  font-family: "Cuprum", serif;
+html,body{
+    margin:0;
+    padding:0;
 }
 
-h1 {
-  font-size: 24px;
-  line-height: normal;
-  color: currentColor;
-  font-weight: bold;
-  font-family: "PT Sans", serif;
+body{
+    font-size:16px;
+    font-family:"Open Sans", sans-serif;
+    color:black;
+    background:white;
 }
-h2 {
-  font-size: 18px;
-  line-height: normal;
-  color:currentColor;
-  font-weight: bold;
-  font-family: "PT Sans", serif;
+/*сетки*/
+.main-header {
+  /* Только для оформления сетки */
+  min-height: 70px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.conteiner {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  /* Только для оформления сетки */
+  min-height: 70px;
+}
+
+.main-header {
+  margin-bottom: 60px;
+}
+
+.head-one {
+  width: 940px;
+
+  /* Только для оформления сетки */
+  min-height: 70px;
+}
+
+.items {
+   width: 400px;
+   float: left;
+  /* Только для оформления сетки */
+  min-height: 70px;
+}
+
+.checkout {
+   width: 140px;
+   float: right;
+  /* Только для оформления сетки */
+  min-height: 70px;
+}
+
+.head-two {
+  width: 940px;
+
+  /* Только для оформления сетки */
+  min-height: 70px;
+}
+
+.features-item {
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.index-content {
+  padding: 50px 0px;
+}
+
+.index-content-left {
+  float: left;
+  width: 560px;
+  /* Только для оформления сетки */
+  min-height: 330px;
+}
+
+.index-content-right {
+  float: right;
+  width: 380px;
+  /* Только для оформления сетки */
+  min-height: 330px;
+}
+
+/*======================================
+ Системное оформление - не изменять
+=======================================*/
+
+body {
+  padding: 3px;
+}
+
+body > *,
+body > * > *,
+body > * > * > * {
+  position: relative;
+}
+
+body > *::before,
+body > * > *::before,
+body > * > * > *::before {
+  display: none;
+}
+
+body > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > *::before {
+  top: -3px;
+  left: -3px;
+}
+
+body > * > * > *::before {
+  top: 0;
+  left: 0;
+}
+
+body > * {
+  background: rgba(0, 128, 0, 0.2);
+  box-shadow: 0 0 0 3px green;
+}
+
+body > *::before {
+  color: white;
+
+  background: green;
+}
+
+body > * > * {
+  background: rgba(255, 45, 82, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+body > * > *::before {
+  color: white;
+
+  background: rgb(255, 45, 82);
+}
+
+body > * > * > * {
+  background: rgba(234, 255, 45, 0.2);
+  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+
+}
+
+body > * > * > *::before {
+  color: black;
+
+  background: rgb(234, 255, 45);
+}
+
+.main-header::before {
+  content: ".main-header";
+}
+
+.container::before {
+  content: ".container";
+}
+
+.main-header .container::before {
+  top: auto;
+  bottom: -28px;
+}
+
+.main-navigation::before {
+  content: ".main-navigation";
+}
+
+.user-block::before {
+  content: ".user-block";
+}
+
+.index-logo::before {
+  content: ".index-logo";
+}
+
+.features::before {
+  content: ".features";
+  top: -28px;
+}
+
+.features-item::before {
+  content: ".features-item";
+}
+
+.index-content::before {
+  content: ".index-content";
+}
+
+.index-content-left::before {
+  content: ".index-content-left";
+  left: auto;
+  right: 0;
+}
+
+.index-content-right::before {
+  content: ".index-content-right";
+  left: auto;
+  right: 0;
+}
+
+.main-footer::before {
+  content: ".main-footer";
+}
+
+.main-footer .container::before {
+  top: -28px;
+}
+
+.footer-contacts::before {
+  content: ".footer-contacts";
+}
+
+.footer-social::before {
+  content: ".footer-social";
+}
+
+.footer-copyright::before {
+  content: ".footer-copyright";
+}
+
+
+/*======================================
+ Системное оформление выше- не изменять
+=======================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*Зададим ширину списка товаров и отцентруем его*/
+.catalog-items{
+    width:700px;
+    margin:20px auto;
+}
+
+/* Зададим размеры, отступы и рамки элементу каталога, а также текстовые стили для него */
+.catalog-item{
+    position:relative;
+    display:inline-block;
+    width:218px;
+    margin-right:20px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    line-height:20px;
+    font-weight:bold;
+    text-align:center;
+}
+/* Зададим стили флажку "новинка", расположим его
+с помощью абсолютного позиционирования и ленточку зададим с помощью фона */
+.catalog-item .flag{
+    position:absolute;
+    top:-1px;
+    right:-1px;
+    width:60px;
+    height:60px;
+    text-indent:-1000px;
+    overflow:hidden;
+    z-index:20;
+}
+.catalog-item .flag-new{
+    background:url("img/new-flag.png") no-repeat 0 0;
+}
+
+/*Блок с ссылками разместим с помощью абсолютного позиционирования*/
+.catalog-item .actions{
+    position:absolute;
+    top:0;
+    left:0;
+    width:218px;
+    height:88px;
+    padding:40px 0;
+    background-color:rgba(255,255,255,0.9);
+    z-index:10;
+}
+/*Зададим общие стили для кнопок: размеры, отступы, рамки и фон*/
+.catalog-item .actions .buy,
+.catalog-item .actions .bookmark{
+    display:block;
+    width:129px;
+    margin:0 auto;
+    margin-bottom:7px;
+    padding:7px 0;
+    border:3px solid #63a63e;
+    border-bottom-color:#367315;
+    background-color:#63a63e;
+    /*текстовые стили, а также скругления углов*/
+    color:white;
+    font-size:14px;
+    font-weight:normal;
+    font-family:"Cuprum", sans-serif;
+    line-height:18px;
+    text-decoration:none;
+    text-transform:uppercase;
+    border-radius:3px;
+}
+/*Задаём отдельные стили для нижней кнопки*/
+.catalog-item .actions .bookmark{
+    color:#32425c;
+    background:white;
+    border-bottom-color:#63a63e;
+}
+/*чтобы блок с кнопками появлялся только при наведении*/
+.catalog-item .actions{
+    display:none;
+}
+.catalog-item:hover .actions{
+    display:block;
+}
+/**/
+.catalog-item .image{
+    width:218px;
+    height:168px;
+}
+.catalog-item .image img{
+    max-width:100%;
+}
+/*Оформим название товара и скидку*/
+.catalog-item .title{
+    min-height:40px;
+    padding:0 25px;
+    margin-top:10px;
+    margin-bottom:15px;
+}
+.catalog-item .discount{
+    min-height:20px;
+    margin-top:15px;
+    margin-bottom:10px;
+    color:#999;
+    text-decoration:line-through;
+}
+
+/*Оформим блок цены*/
+.catalog-item .price{
+    position:relative;
+    width:80px;
+    margin:10px auto;
+    margin-bottom:20px;
+    padding:10px 30px;
+    color:white;
+    background:#ee3643;
+    border-radius:3px;
+}
+/*Добавим для цены стрелку вправо*/
+.catalog-item .price:after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:-20px;
+    width:0;
+    height:0;
+    border:20px solid white;
+    border-left-color:#ee3643;
 }
