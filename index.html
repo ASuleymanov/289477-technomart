@@ -8,97 +8,82 @@
   <body>
     <header class=main-header>
       <div class="conteiner clearfix">
-        <div class="head-one">
-          <h1><img src="img/tehnomart.png" width="auto" height="auto" alt="техномарт" /></h1>
-          <div class="conteiner">
+        <div class="head-one clearfix">
+          <h1 class="tehnomart"><img src="img/tehnomart.png" width="auto" height="auto" alt="техномарт" /></h1>
             <form class="search" action="index.html" method="post">
               <label> <img src="icon-search.png" alt="" />Поиск:<input type="text" name="search" value=""></label>
             </form>
             <a href="#"><img src="icon-bookmark.png" alt="" />Закладки:</a>
             <a href="#"><img src="icon-basket.png" alt="" />Корзина:</a>
-          </div>
-          <div class="conteiner">
-            <a href="#">Оформить заказ</a>
-          </div>
+            <a class="checkout"href="#">Оформить заказ</a>
         </div>
-        <div class="head-two">
-          <p>
+        <div class="head-two clearfix">
+          <p class="info">
             Интернет-магазин строительных материалов и инструментов для ремонта
           </p>
-          <div class="phone">
-            +7 (812) 555-05-55
+          <div class="contacts">
+            <div class="phone">
+              +7 (812) 555-05-55
+            </div>
+            <p class="address">
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            </p>
           </div>
-          <p>
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          </p>
-          <a class="login" href="#"><img src="icon-login.png" alt="" />Войти</a>
-          <a class="registration" href="#">Регистрация</a>
+          <div class="user">
+            <a class="enter" href="#"><img src="icon-login.png" alt="" />Войти</a>
+            <a class="registration" href="#">Регистрация</a>
+          </div>
         </div>
-        <ul class="main-navigation">
+        <ul class="main-navigation clearfix">
           <li>
-            <a href="#">Главная</a>
+            <a class="navigation-item"href="#">Главная</a>
           </li>
           <li>
-            <a href="#">Компания</a>
+            <a class="navigation-item"href="#">Компания</a>
           </li>
           <li>
-            <a href="#">Каталог</a>
+            <a class="navigation-item"href="#">Каталог</a>
           </li>
           <li>
-            <a href="#">Новости</a>
+            <a class="navigation-item"href="#">Новости</a>
           </li>
           <li>
-            <a href="#">Спецпредложения</a>
+            <a class="navigation-item"href="#">Спецпредложения</a>
           </li>
           <li>
-            <a href="#">Доставка</a>
+            <a class="navigation-item"href="#">Доставка</a>
           </li>
           <li>
-            <a href="#">Контакты</a>
+            <a class="navigation-item"href="#">Контакты</a>
           </li>
         </ul>
       </div>
-
     </header>
-    <main class="conteiner">
-      <div class="features-items">
-        <div class="features-item">
+    <main class="conteiner clearfix">
+      <div class="category-items clearfix">
+        <div class="item">
           <img src="img/materials.png" alt="материалы" />
           <p>
             Материалы
           </p>
           <a href="#">на любой вкус</a>
         </div>
-        <div class="features-item">
+        <div class="item">
           <img src="img/instrument.png" alt="инструмент" />
           <p>
             Инструмент
           </p>
           <a href="#">на все случае жизни</a>
         </div>
-        <div class="features-item">
+        <div class="item">
           <img src="img/technics.png" alt="техника" />
           <p>
             Техника
           </p>
           <a href="#">для стройки</a>
         </div>
-        <div class="features-item">
-          <img src="img/discount.png" alt="скидка" />
-          <p>
-            Скидка 50%
-          </p>
-          <a href="#">на 350 товаров</a>
-        </div>
-        <div class="features-item">
-          <img src="img/delivery.png" alt="доставка" />
-          <p>
-            Доставка
-          </p>
-          <a href="#">бесплатно</a>
-        </div>
-        <div class="features-big-item">
-          <img src="img/worker.png" width="500" height="250" alt="рабочий" />
+        <div class="big-item">
+          <img src="img/worker.png" width="620" height="220" alt="рабочий" />
           <div>
             ПЕРФОРАТОРЫ
           </div>
@@ -107,12 +92,27 @@
           </p>
           <a href="#">открыть каталог</a>
         </div>
+        <div class="item">
+          <img src="img/discount.png" alt="скидка" />
+          <p>
+            Скидка 50%
+          </p>
+          <a href="#">на 350 товаров</a>
+        </div>
+        <div class="item">
+          <img src="img/delivery.png" alt="доставка" />
+          <p>
+            Доставка
+          </p>
+          <a href="#">бесплатно</a>
+        </div>
+
       </div>
-      <div class="popular-products">
-        <h2>ПОПУЛЯРНЫЕ ТОВАРЫ:</h2>
-        <a href="#">все популярные товары</a>
+      <div class="wraper-products clearfix">
+        <h2 class="popular-products">ПОПУЛЯРНЫЕ ТОВАРЫ:</h2>
+        <a class="all-products" href="#">все популярные товары</a>
       </div>
-      <div class="catalog-items">
+      <div class="conteiner clearfix">
         <div class="catalog-item">
           <div class="flag flag-new">новинка</div>
           <div class="actions">
@@ -158,21 +158,38 @@
           <div class="price">15 500 Р.</div>
         </div>
       </div>
-      <div class="popular-manufacturers">
-        <div class="cap">
-          <h2>ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h2>
+
+      <div class="wraper-manufacturers clearfix">
+        <div class="cap clearfix">
+          <h2 class="popular-manufacturers">ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h2>
           <div>
-            <a href="#">все производители</a>
+            <a class="all-manufacturers"href="#">все производители</a>
           </div>
         </div>
-        <a href="#"><img src="img/bosch.jpg" width="auto" height="auto" alt="bosch"></a>
-        <a href="#"><img src="img/makita.jpg" alt="Makita"></a>
-        <a href="#"><img src="img/dewalt.jpg" alt="Dewalt"></a>
-        <a href="#"><img src="img/interscol.jpg" alt="Интерскол"></a>
-        <a href="#"><img src="img/hitachi.jpg" alt="Hitachi"></a>
-        <a href="#"><img src="img/lg.jpg" alt="LG"></a>
-        <a href="#"><img src="img/aeg.jpg" alt="AEG"></a>
-        <a href="#"><img src="img/metabo.jpg" alt="Metabo"></a>
+        <div class="logo-item">
+          <a href="#"><img src="img/bosch.jpg" width="auto" height="auto" alt="bosch"></a>
+        </div>
+        <div class="logo-item">
+          <a href="#"><img src="img/makita.jpg" alt="Makita"></a>
+        </div>
+        <div class="logo-item">
+          <a href="#"><img src="img/dewalt.jpg" alt="Dewalt"></a>
+        </div>
+        <div class="logo-item">
+          <a href="#"><img src="img/interscol.jpg" alt="Интерскол"></a>
+        </div>
+        <div class="logo-item">
+          <a href="#"><img src="img/hitachi.jpg" alt="Hitachi"></a>
+        </div>
+        <div class="logo-item">
+          <a href="#"><img src="img/lg.jpg" alt="LG"></a>
+        </div>
+        <div class="logo-item">
+          <a href="#"><img src="img/aeg.jpg" alt="AEG"></a>
+        </div>
+        <div class="logo-item">
+          <a href="#"><img src="img/metabo.jpg" alt="Metabo"></a>
+        </div>
       </div>
       <div>
         <h2>Сервисы</h2>
@@ -219,31 +236,36 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="conteiner clearfix">
-        <div class="container-up">
-          <img src="img/tehnomart.png" alt="техномарт" />
-          <div class="footer-contacts">
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>+7 (812) 555-05-55
+      <div class="footer-up">
+        <div class="conteiner clearfix">
+          <div class="contacts">
+            <img class="putton"src="img/tehnomart.png" alt="техномарт" />
+            <p>
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>+7 (812) 555-05-55
+            </p>
           </div>
-          <ul>
-            <li><a href="#">Компания</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
+          <ul class="footer-navigation-one">
+            <li class="navigation-item"><a href="#">Компания</a></li>
+            <li class="navigation-item"><a href="#">Новости</a></li>
+            <li class="navigation-item"><a href="#">Каталог</a></li>
+            <li class="navigation-item"><a href="#">Доставка</a></li>
+            <li class="navigation-item"><a href="#">Контакты</a></li>
           </ul>
-          <ul>
-            <li><a href="#">Материалы</a></li>
-            <li><a href="#">Техника</a></li>
-            <li><a href="#">Инструмент</a></li>
-            <li><a href="#">Спецпредложения</a></li>
+          <ul class="footer-navigation-two">
+            <li class="navigation-item"><a href="#">Материалы</a></li>
+            <li class="navigation-item"><a href="#">Техника</a></li>
+            <li class="navigation-item"><a href="#">Инструмент</a></li>
+            <li class="navigation-item"><a href="#">Спецпредложения</a></li>
           </ul>
         </div>
-        <div class="container-down">
-          <div>
+
+      </div>
+      <div class="footer-down">
+        <div class="conteiner">
+          <div class="company">
             © 2010–2016 Компания «Техномарт»<br>Все права защищены
           </div>
-          <div class="footer-social">
+          <div class="img-social">
             <a href="#"><img src="img/icon-vk.png" alt="Вконтакте" /></a>
             <a href="#"><img src="img/icon-facebook.png" alt="Фэйсбук" /></a>
             <a href="#"><img src="img/icon-instagramm.png" alt="Инстаграм" /></a>
@@ -252,12 +274,20 @@
             <p>Обратная связь:</p>
             <a href="#">mail@htmlacademy.ru</a>
           </div>
-          <div class="footer-copyright">
+          <div class="copyright">
             <p>Разработано — </p>
             <a href="#">htmlacademy.ru</a>
           </div>
         </div>
       </div>
     </footer>
+
+
+
+
+
+
+
+
   </body>
 </html>

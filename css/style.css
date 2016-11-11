@@ -1,4 +1,5 @@
-html,body{
+html,
+body{
     margin:0;
     padding:0;
 }
@@ -25,66 +26,193 @@ body{
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
-
-  /* Только для оформления сетки */
-  min-height: 70px;
+  border: 1px solid #fff;
+  height: 100%;
 }
 
 .main-header {
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 }
-
-.head-one {
-  width: 940px;
-
-  /* Только для оформления сетки */
-  min-height: 70px;
+.tehnomart,
+.search {
+  float: left;
+  border: 1px dotted #666666;
 }
-
-.items {
-   width: 400px;
-   float: left;
-  /* Только для оформления сетки */
-  min-height: 70px;
-}
-
 .checkout {
-   width: 140px;
-   float: right;
-  /* Только для оформления сетки */
-  min-height: 70px;
+  float: right;
+
 }
 
 .head-two {
   width: 940px;
-
-  /* Только для оформления сетки */
-  min-height: 70px;
+  min-height: 160px;
+  background-color:
 }
 
-.features-item {
+.info {
+  float:left;
+  width: 33.33%;
+  padding-left: 60px;
+  box-sizing: border-box;
+  padding-right:20px;
+  border: 1px dotted #666666;
+}
+.contacts {
+  float:left;
+  width: 33.33%;
+  padding-left: 60px;
+  box-sizing: border-box;
+  padding-right:20px;
+  border: 1px dotted #666666;
+}
+.user {
+  float:right;
+  width: 33.33%;
+  box-sizing: border-box;
+}
+.enter {
+  float:left;
+  width: 120px;
+  min-height: 46px;
+  box-sizing: border-box;
+  border: 1px dotted #666666;
+}
+.registration {
+  float:right;
+  width: 148px;
+  min-height: 46px;
+  box-sizing: border-box;
+  border: 1px dotted #666666;
+}
+
+.main-navigation {
+  list-style: none;
+}
+.navigation-item {
   float: left;
+  min-height: 60px;
+  padding-right:45px;
+
+}
+
+.navigation-item:nth-child(7){
+  padding-right: 0;
+}
+
+.category-items{
+  width: 940px;
+  padding: 0 10px;
+  background-color: lightblue;
+}
+.item{
   width: 300px;
+  height: 100px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: lightgreen;
+  float: left;
+}
+.item:nth-child(3),
+.item:nth-child(6),
+.item:nth-child(5){
+  margin-right: 0;
+}
+.big-item {
+  width: calc(300px * 2 + 20px);
+  height: calc(100px * 2 + 20px);
+  background-color: lightyellow;
+  float: left;
   margin-right: 20px;
 }
 
-.index-content {
-  padding: 50px 0px;
-}
-
-.index-content-left {
+.popular-products,
+.popular-manufacturers {
   float: left;
-  width: 560px;
-  /* Только для оформления сетки */
-  min-height: 330px;
+}
+.all-products,
+.all-manufacturers {
+  float:right;
+
 }
 
-.index-content-right {
-  float: right;
-  width: 380px;
-  /* Только для оформления сетки */
-  min-height: 330px;
+.logo-item{
+  width: 220px;
+  min-height: 145px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  float: left;
+  text-align:center;
 }
+.logo-item:nth-child(5),
+.logo-item:nth-child(9){
+  margin-right: 0;
+}
+
+.main-footer{
+  min-height: 246px;
+  border: 1px dotted #666666;
+}
+
+.footer-up{
+  margin: 0px;
+  min-height: 193px;
+  background-color: #32425c;
+  border: 1px dotted #666666;
+}
+
+.contacts {
+  padding-left: 0px;
+  width: 330px;
+  min-height: 140px;
+  background-color: ;
+  border: 1px dotted #666666;
+}
+
+.footer-navigation-one {
+  float:right;
+  list-style: none;
+  border: 1px dotted #666666;
+}
+.footer-navigation-one:nth-child(4){
+  padding-right: 0;
+}
+
+
+.footer-navigation-two {
+  float:right;
+  list-style: none;
+  border: 1px dotted #666666;
+}
+
+.footer-down{
+  min-height: 53px;
+  background-color: #293449;
+  border: 1px dotted #666666;
+}
+.company {
+  float:left;
+  width: 33.33%;
+  border: 1px dotted #666666;
+}
+.img-social {
+  float:left;
+  width: 33.33%;
+  border: 1px dotted #666666;
+}
+.footer-mail {
+  float:left;
+  width: 15,16%;
+  border: 1px dotted #666666;
+}
+.copyright {
+  float:left;
+  width: 15,16%;
+  border: 1px dotted #666666;
+}
+
+
+
 
 /*======================================
  Системное оформление - не изменять
@@ -258,6 +386,9 @@ body > * > * > *::before {
     line-height:20px;
     font-weight:bold;
     text-align:center;
+}
+.catalog-item:nth-child(3){
+  margin-right: 0;
 }
 /* Зададим стили флажку "новинка", расположим его
 с помощью абсолютного позиционирования и ленточку зададим с помощью фона */
