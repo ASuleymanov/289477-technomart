@@ -1,19 +1,24 @@
 html,
-body{
-    margin:0;
-    padding:0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-size:16px;
-    font-family:"Open Sans", sans-serif;
-    color:black;
-    background:white;
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  background: white;
 }
+
+
 /*сетки*/
+
 .main-header {
   /* Только для оформления сетки */
   min-height: 70px;
+  border: 1px dotted #666666;
+  background-color: #f1f5f7;
 }
 
 .clearfix::after {
@@ -25,60 +30,115 @@ body{
 .conteiner {
   width: 940px;
   margin: 0 auto;
-  padding: 0 10px;
-  border: 1px solid #fff;
-  height: 100%;
+  border: 1px dotted #666666;
 }
 
 .main-header {
   margin-bottom: 120px;
+  border: 1px dotted #666666;
 }
+
+.header-up {
+  min-height: 40px;
+  border: 1px dotted #6666;
+  box-sizing: border-box;
+}
+
 .tehnomart,
 .search {
   float: left;
+  width: 220px;
+  border: 1px dotted #666666;
+  box-sizing: border-box;
+}
+
+.bookmark {
+  float: right;
+  width: 140px;
+  min-height: 40px;
+  text-align: center;
+  padding-top: 3px;
+  box-sizing: border-box;
   border: 1px dotted #666666;
 }
-.checkout {
-  float: right;
 
+.basket {
+  float: right;
+  width: 140px;
+  min-height: 40px;
+  text-align: center;
+  padding-top: 3px;
+  box-sizing: border-box;
+  border: 1px dotted #666666;
 }
 
-.head-two {
+.checkout {
+  float: right;
+  width: 150px;
+  min-height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+  background-color: #63a63e;
+}
+
+.header-down {
   width: 940px;
   min-height: 160px;
-  background-color:
+  border: 1px dotted #666666;
 }
 
 .info {
-  float:left;
-  width: 33.33%;
+  float: left;/*почему не прижимается в верхний левый угол?*/
+  width: 30%;
   padding-left: 60px;
   box-sizing: border-box;
-  padding-right:20px;
+  padding-right: 20px;
+  background-color: #cae0eb;
+}
+
+.contacts {
+  float: left;
+  width: 30%;
+  padding-left: 6px;
+  padding-right: 20px;
+  text-align: center;
+  background-color: #99d4f1;
+}
+
+.phone {
+  width: 240px;
+  min-height: 45px;
+  text-align: center;
+  padding-top: 10px;
   border: 1px dotted #666666;
 }
-.contacts {
-  float:left;
-  width: 33.33%;
-  padding-left: 60px;
-  box-sizing: border-box;
-  padding-right:20px;
+.address {
+  text-align: center;
+  padding-top: 10px;
+  background-color: #cae0eb;
   border: 1px dotted #666666;
 }
 .user {
-  float:right;
-  width: 33.33%;
+  float: right;
+  width: 30%;
   box-sizing: border-box;
+  text-align: center;
+
+  background-color: #cae0eb;
 }
+
 .enter {
-  float:left;
+  float: right;
   width: 120px;
   min-height: 46px;
+  margin-right: 10px;
   box-sizing: border-box;
   border: 1px dotted #666666;
 }
+
 .registration {
-  float:right;
+  float: right;
   width: 148px;
   min-height: 46px;
   box-sizing: border-box;
@@ -87,271 +147,280 @@ body{
 
 .main-navigation {
   list-style: none;
+  box-sizing: border-box;
+  border: 1px dotted #666666;
 }
+
 .navigation-item {
   float: left;
   min-height: 60px;
-  padding-right:45px;
-
+  padding-right: 60px;
 }
 
-.navigation-item:nth-child(7){
-  padding-right: 0;
+.navigation-item:nth-child(7) {
+  padding-right: 0;/*почему не убирается отступ*/
 }
 
-.category-items{
+.category-items {
   width: 940px;
-  padding: 0 10px;
-  background-color: lightblue;
+  border: 1px dotted #666666;
 }
-.item{
+
+.item {
   width: 300px;
-  height: 100px;
+  height: 120px;
   margin-right: 20px;
   margin-bottom: 20px;
   background-color: lightgreen;
   float: left;
 }
+
 .item:nth-child(3),
 .item:nth-child(6),
-.item:nth-child(5){
+.item:nth-child(5) {
   margin-right: 0;
 }
+
 .big-item {
   width: calc(300px * 2 + 20px);
-  height: calc(100px * 2 + 20px);
+  height: 260px;
   background-color: lightyellow;
   float: left;
   margin-right: 20px;
 }
 
+.name-category {
+  margin-left: 22px;
+}
+
+.putton-shadow {
+  min-height: 40px;
+  margin-left: 25px;
+  background-color: #ff1f92;
+}
+
+.punchers {
+  border: 1px dotted #666666;
+}
+
+.cap-products,
+.cap-factory {
+  background-color: #f1f5f7;
+}
+
+.wraper-factory{
+  background-color: #9ff171
+}
+
 .popular-products,
-.popular-manufacturers {
+.popular-factory {
   float: left;
+  border: 1px dotted #666666;
 }
+
 .all-products,
-.all-manufacturers {
-  float:right;
-
+.all-factory {
+  float: right;
+  width: 250px;
+  min-height: 40px;
+  background-color: #ee3643;
 }
 
-.logo-item{
+.logo-item {
   width: 220px;
   min-height: 145px;
   margin-right: 20px;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #ffff78;
   float: left;
-  text-align:center;
-}
-.logo-item:nth-child(5),
-.logo-item:nth-child(9){
-  margin-right: 0;
+  text-align: center;
 }
 
-.main-footer{
+.logo-item:nth-child(4),
+.logo-item:nth-child(8) {
+  margin-right: 0; /*вот здесь не понимаю почему не изменяется*/
+}
+
+.other {
+  min-height: 520px;
+  background-color: #f2f6f8;
+}
+
+.other-one {
+
+  background-color: #ffff92;
+  margin-bottom: 70px;
+}
+.service{
+  float: left;
+  width: 940px;
+  box-sizing: border-box;
+  border: 1px dotted #666666;
+
+}
+.services-info{
+  float: left;
+  width: 400px;
+  box-sizing: border-box;
+  border: 1px dotted #666666;
+}
+.other-two {
+  float: left;
+  width: 240px;
+  min-height: 180px;
+  background-color: #229edc;
+}
+
+.button-item {
+  float: left;
+  width: 240px;
+  min-height: 60px;
+  background-color: #ff1f92;
+  border: 1px dotted #666666;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.other-three {
+  float: left;
+  width: 700px;
+  background-color: #f1ff92;
+}
+.delivery {
+  padding-left:80px;
+  box-sizing: border-box;
+  border: 1px dotted #666666;
+}
+.delivery-info{
+  padding-left:80px;
+  width: 275px;
+  box-sizing: border-box;
+  border: 1px dotted #666666;
+}
+
+.other-three-left {
+  float: left;
+}
+
+.img-car {
+  float: right;
+}
+.index-content{
+  min-height:535px;
+}
+.index-content-left {
+  float: left;
+  width: 640px;
+  background-color: #21ff92;
+}
+
+.index-content-right {
+  float: right;
+  width: 300px;
+  background-color: #f1ff92;
+}
+
+.putton-company {
+  float: left;
+  min-height: 40px;
+  width: 240px;
+  background-color: #ff1f92;
+}
+
+.index-content-contacts {
+  float: left;
+}
+.index-content-map-write{
+  width:300px;
+  min-height:240px;
+  border: 1px dotted #666666;
+}
+.map {
+  float: right;
+  padding-bottom: 40px;
+}
+
+.putton-write {
+  float: right;
+  min-height: 40px;
+  background-color: #ff1f92;
+}
+
+.main-footer {
   min-height: 246px;
   border: 1px dotted #666666;
 }
 
-.footer-up{
-  margin: 0px;
+.footer-up {
+
   min-height: 193px;
   background-color: #32425c;
   border: 1px dotted #666666;
 }
 
 .contacts {
-  padding-left: 0px;
   width: 330px;
   min-height: 140px;
-  background-color: ;
   border: 1px dotted #666666;
+}
+
+.address {
+  float: left;
+  border: 1px dotted #666666;
+  box-sizing: border-box;
 }
 
 .footer-navigation-one {
-  float:right;
+  float: right;
   list-style: none;
   border: 1px dotted #666666;
 }
-.footer-navigation-one:nth-child(4){
+
+.footer-navigation-one:nth-child(4) {
   padding-right: 0;
 }
 
-
 .footer-navigation-two {
-  float:right;
+  float: right;
   list-style: none;
   border: 1px dotted #666666;
 }
 
-.footer-down{
+.footer-down {
   min-height: 53px;
   background-color: #293449;
   border: 1px dotted #666666;
 }
+
 .company {
-  float:left;
+  float: left;
   width: 33.33%;
   border: 1px dotted #666666;
 }
+
 .img-social {
-  float:left;
+  float: left;
   width: 33.33%;
+  padding: 1%;
   border: 1px dotted #666666;
 }
+
 .footer-mail {
-  float:left;
-  width: 15,16%;
+  float: left;
+  width: 15%;
   border: 1px dotted #666666;
 }
+
 .copyright {
-  float:left;
-  width: 15,16%;
+  float: left;
+  width: 15%;
   border: 1px dotted #666666;
 }
-
-
 
 
 /*======================================
  Системное оформление - не изменять
 =======================================*/
-
-body {
-  padding: 3px;
-}
-
-body > *,
-body > * > *,
-body > * > * > * {
-  position: relative;
-}
-
-body > *::before,
-body > * > *::before,
-body > * > * > *::before {
-  display: none;
-}
-
-body > *::before {
-  top: -3px;
-  left: -3px;
-}
-
-body > * > *::before {
-  top: -3px;
-  left: -3px;
-}
-
-body > * > * > *::before {
-  top: 0;
-  left: 0;
-}
-
-body > * {
-  background: rgba(0, 128, 0, 0.2);
-  box-shadow: 0 0 0 3px green;
-}
-
-body > *::before {
-  color: white;
-
-  background: green;
-}
-
-body > * > * {
-  background: rgba(255, 45, 82, 0.2);
-  box-shadow: 0 0 0 3px rgb(255, 45, 82);
-}
-
-body > * > *::before {
-  color: white;
-
-  background: rgb(255, 45, 82);
-}
-
-body > * > * > * {
-  background: rgba(234, 255, 45, 0.2);
-  box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
-
-}
-
-body > * > * > *::before {
-  color: black;
-
-  background: rgb(234, 255, 45);
-}
-
-.main-header::before {
-  content: ".main-header";
-}
-
-.container::before {
-  content: ".container";
-}
-
-.main-header .container::before {
-  top: auto;
-  bottom: -28px;
-}
-
-.main-navigation::before {
-  content: ".main-navigation";
-}
-
-.user-block::before {
-  content: ".user-block";
-}
-
-.index-logo::before {
-  content: ".index-logo";
-}
-
-.features::before {
-  content: ".features";
-  top: -28px;
-}
-
-.features-item::before {
-  content: ".features-item";
-}
-
-.index-content::before {
-  content: ".index-content";
-}
-
-.index-content-left::before {
-  content: ".index-content-left";
-  left: auto;
-  right: 0;
-}
-
-.index-content-right::before {
-  content: ".index-content-right";
-  left: auto;
-  right: 0;
-}
-
-.main-footer::before {
-  content: ".main-footer";
-}
-
-.main-footer .container::before {
-  top: -28px;
-}
-
-.footer-contacts::before {
-  content: ".footer-contacts";
-}
-
-.footer-social::before {
-  content: ".footer-social";
-}
-
-.footer-copyright::before {
-  content: ".footer-copyright";
-}
 
 
 /*======================================
@@ -359,140 +428,163 @@ body > * > * > *::before {
 =======================================*/
 
 
-
-
-
-
-
-
-
-
-
-
 /*Зададим ширину списка товаров и отцентруем его*/
-.catalog-items{
-    width:700px;
-    margin:20px auto;
+
+.catalog-items {
+  width: 700px;
+  margin: 20px auto;
 }
+
 
 /* Зададим размеры, отступы и рамки элементу каталога, а также текстовые стили для него */
-.catalog-item{
-    position:relative;
-    display:inline-block;
-    width:218px;
-    margin-right:20px;
-    margin-bottom:20px;
-    border:1px solid #ccc;
-    line-height:20px;
-    font-weight:bold;
-    text-align:center;
+
+.catalog-item {
+  position: relative;
+  display: inline-block;
+  width: 218px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
 }
-.catalog-item:nth-child(3){
+
+.catalog-item:nth-child(3) {
   margin-right: 0;
 }
+
+
 /* Зададим стили флажку "новинка", расположим его
 с помощью абсолютного позиционирования и ленточку зададим с помощью фона */
-.catalog-item .flag{
-    position:absolute;
-    top:-1px;
-    right:-1px;
-    width:60px;
-    height:60px;
-    text-indent:-1000px;
-    overflow:hidden;
-    z-index:20;
+
+.catalog-item .flag {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  text-indent: -1000px;
+  overflow: hidden;
+  z-index: 20;
 }
-.catalog-item .flag-new{
-    background:url("img/new-flag.png") no-repeat 0 0;
+
+.catalog-item .flag-new {
+  background: url("img/new-flag.png") no-repeat 0 0;
 }
+
 
 /*Блок с ссылками разместим с помощью абсолютного позиционирования*/
-.catalog-item .actions{
-    position:absolute;
-    top:0;
-    left:0;
-    width:218px;
-    height:88px;
-    padding:40px 0;
-    background-color:rgba(255,255,255,0.9);
-    z-index:10;
-}
-/*Зададим общие стили для кнопок: размеры, отступы, рамки и фон*/
-.catalog-item .actions .buy,
-.catalog-item .actions .bookmark{
-    display:block;
-    width:129px;
-    margin:0 auto;
-    margin-bottom:7px;
-    padding:7px 0;
-    border:3px solid #63a63e;
-    border-bottom-color:#367315;
-    background-color:#63a63e;
-    /*текстовые стили, а также скругления углов*/
-    color:white;
-    font-size:14px;
-    font-weight:normal;
-    font-family:"Cuprum", sans-serif;
-    line-height:18px;
-    text-decoration:none;
-    text-transform:uppercase;
-    border-radius:3px;
-}
-/*Задаём отдельные стили для нижней кнопки*/
-.catalog-item .actions .bookmark{
-    color:#32425c;
-    background:white;
-    border-bottom-color:#63a63e;
-}
-/*чтобы блок с кнопками появлялся только при наведении*/
-.catalog-item .actions{
-    display:none;
-}
-.catalog-item:hover .actions{
-    display:block;
-}
-/**/
-.catalog-item .image{
-    width:218px;
-    height:168px;
-}
-.catalog-item .image img{
-    max-width:100%;
-}
-/*Оформим название товара и скидку*/
-.catalog-item .title{
-    min-height:40px;
-    padding:0 25px;
-    margin-top:10px;
-    margin-bottom:15px;
-}
-.catalog-item .discount{
-    min-height:20px;
-    margin-top:15px;
-    margin-bottom:10px;
-    color:#999;
-    text-decoration:line-through;
+
+.catalog-item .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 88px;
+  padding: 40px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
 }
 
-/*Оформим блок цены*/
-.catalog-item .price{
-    position:relative;
-    width:80px;
-    margin:10px auto;
-    margin-bottom:20px;
-    padding:10px 30px;
-    color:white;
-    background:#ee3643;
-    border-radius:3px;
+
+/*Зададим общие стили для кнопок: размеры, отступы, рамки и фон*/
+
+.catalog-item .actions .buy,
+.catalog-item .actions .bookmark {
+  display: block;
+  width: 129px;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  padding: 7px 0;
+  border: 3px solid #63a63e;
+  border-bottom-color: #367315;
+  background-color: #63a63e;
+  /*текстовые стили, а также скругления углов*/
+  color: white;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Cuprum", sans-serif;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
 }
+
+
+/*Задаём отдельные стили для нижней кнопки*/
+
+.catalog-item .actions .bookmark {
+  color: #32425c;
+  background: white;
+  border-bottom-color: #63a63e;
+}
+
+
+/*чтобы блок с кнопками появлялся только при наведении*/
+
+.catalog-item .actions {
+  display: none;
+}
+
+.catalog-item:hover .actions {
+  display: block;
+}
+
+
+/**/
+
+.catalog-item .image {
+  width: 218px;
+  height: 168px;
+}
+
+.catalog-item .image img {
+  max-width: 100%;
+}
+
+
+/*Оформим название товара и скидку*/
+
+.catalog-item .title {
+  min-height: 40px;
+  padding: 0 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.catalog-item .discount {
+  min-height: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+
+/*Оформим блок цены*/
+
+.catalog-item .price {
+  position: relative;
+  width: 80px;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  color: white;
+  background: #ee3643;
+  border-radius: 3px;
+}
+
+
 /*Добавим для цены стрелку вправо*/
-.catalog-item .price:after{
-    content:"";
-    position:absolute;
-    top:0;
-    right:-20px;
-    width:0;
-    height:0;
-    border:20px solid white;
-    border-left-color:#ee3643;
+
+.catalog-item .price:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border: 20px solid white;
+  border-left-color: #ee3643;
 }
