@@ -11,13 +11,17 @@ body {
   background: white;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   background-color: green;
   min-height: 320px;
 }
 
 main {
-  background-color: #61b4de;
+  background-color: #61b4d;
   height: 100%;
 }
 
@@ -40,12 +44,16 @@ footer {
 }
 
 .header-up {
-  height: 50px;
+  min-height: 50px;
   background-color: #293449;
 }
 
 .header-down {
   min-height: 275px;
+  background-color: #f1f5f7;
+}
+
+.main-block-for {
   background-color: #f1f5f7;
 }
 
@@ -80,8 +88,7 @@ footer {
 }
 
 .header-down-two {
-  min-height: 60px;
-  padding-top: 5px;
+  min-height: 55px;
   background-color: #32425c;
 }
 
@@ -91,13 +98,13 @@ footer {
 }
 
 .main-block-cap-two {
-  min-height: 100px;
+  min-height: 90px;
   background-color: #f7f3ec;
 }
 
 .main-block-two {
   background-color: #f7c172;
-  min-height: 400px;
+  min-height: 315px;
 }
 
 .main-block-cap-three {
@@ -111,13 +118,26 @@ footer {
 }
 
 .main-block-for {
-  background-color: #f7c172;
+  background-color: #f2f6f8;
   min-height: 400px;
 }
 
 .main-block-five {
   background-color: #9c8c75;
   min-height: 535px;
+}
+
+.main-catalog-block-left {
+  float: left;
+  width: 220px;
+  background-color: #f7cd08;
+}
+
+.main-catalog-block-right {
+  float: left;
+  width: 700px;
+  margin-left: 20px;
+  background-color: #a77e42;
 }
 
 .footer-up-left {
@@ -269,7 +289,7 @@ footer {
 
 .navigation-item {
   float: left;
-  min-height: 60px;
+  padding-top: 12.5px;
   padding-right: 50px;
 }
 
@@ -305,8 +325,11 @@ footer {
 }
 
 .putton-shadow {
+  float: left;
+  width: 135px;
   min-height: 40px;
   margin-left: 25px;
+  text-align: center;
   background-color: #ff1f92;
 }
 
@@ -330,18 +353,20 @@ footer {
 .all-factory {
   float: right;
   width: 250px;
+  margin-top: 24px;
   min-height: 40px;
+  padding-top: 14px;
+  text-align: center;
   background-color: #ee3643;
 }
 
 .catalog-item {
   float: left;
-  width: 220px;
   min-height: 320px;
+  margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
   background-color: #ffffff;
-  text-align: center;
 }
 
 .catalog-item:nth-child(4n) {
@@ -349,13 +374,14 @@ footer {
 }
 
 .logo-item {
+  float: left;
   width: 220px;
   min-height: 145px;
   margin-right: 20px;
   margin-bottom: 20px;
   background-color: #ffffff;
-  float: left;
   text-align: center;
+  vertical-align: middle;
 }
 
 .logo-item:nth-child(4),
@@ -501,6 +527,137 @@ footer {
   float: left;
   width: 40%;
   border: 1px dotted #666666;
+}
+
+
+/*catalog-page*/
+
+.user {
+  text-align: center;
+}
+
+.user-order,
+.user-office {
+  float: left;
+  border: 1px dotted #666666;
+}
+
+.main-sorting {
+  padding-left: 10px;
+  min-height: 38px;
+  border: 1px dotted #666666;
+  box-sizing: border-box;
+}
+
+.sorting {
+  float: left;
+}
+
+.sorting-param {
+  float: left;
+  margin-left: 140px;
+  list-style: none;
+}
+
+.sorting-param-item {
+  float: left;
+}
+
+.number-page {
+  float: left;
+  margin-left: 240px;
+  list-style: none;
+  min-height: 38px;
+  border: 1px dotted #666666;
+}
+
+.number-page-item {
+  float: left;
+  padding: 10px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  border: 1px dotted #666666;
+}
+
+.filter-name {
+  padding: 10px;
+  background-color: #f7f3ec;
+}
+
+.filter-price-name {
+  min-height: 55px;
+  padding-top: 20px;
+  background-color: #ffffff;
+  box-sizing: border-bo;
+}
+
+.bar {
+  padding-top: 35px;
+  min-height: 80px;
+  margin-bottom: 10px;
+  background-color: #f7f3ec;
+  box-sizing: border-box;
+}
+
+.bar-start {
+  float: left;
+  width: 95px;
+  background-color: #f7f3ec;
+  box-sizing: border-box;
+}
+
+.bar-end {
+  float: right;
+  width: 95px;
+  margin-top: 0px;
+  min-height: 40px;
+  background-color: #f7f3ec;
+  border-top: 1px dotted #666666;
+  box-sizing: border-box;
+}
+
+.filter-block-factory {
+  border-top: 1px dotted #666666;
+  border-bottom: 1px dotted #666666;
+  box-sizing: border-box;
+  background-color: #ff1f92;
+}
+
+.filter-block-power {
+  float: left;
+  min-height: 240px;
+}
+
+.factory,
+.power {
+  float: left;
+  width: 240px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.factory-item,
+.power-item {
+  float: left;
+  padding-bottom: 10px;
+  width: 240px;
+  box-sizing: border-box;
+}
+
+.putton-show {
+  float: left;
+  width: 140px;
+  min-height: 38px;
+  padding-top: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: red;
+}
+
+.main-catalog-block-down {
+  background-color: green;
 }
 
 
