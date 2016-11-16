@@ -92,48 +92,44 @@ footer {
   background-color: #32425c;
 }
 
-.main-block-one {
+.categories-block {
   background-color: #9c8c75;
   min-height: 400px;
 }
 
-.main-block-cap-two {
+.catalog-block-cap,
+.factory-block-cap {
   min-height: 90px;
   background-color: #f7f3ec;
 }
 
-.main-block-two {
+.catalog-block {
   background-color: #f7c172;
   min-height: 315px;
 }
 
-.main-block-cap-three {
-  min-height: 100px;
-  background-color: #f7f3ec;
-}
-
-.main-block-three {
+.factory-block {
   background-color: #9c8c75;
   min-height: 400px;
 }
 
-.main-block-for {
+.services-block {
   background-color: #f2f6f8;
   min-height: 400px;
 }
 
-.main-block-five {
+.info-block {
   background-color: #9c8c75;
   min-height: 535px;
 }
 
-.main-catalog-block-left {
+.catalog .catalog-block-left {
   float: left;
   width: 220px;
   background-color: #f7cd08;
 }
 
-.main-catalog-block-right {
+.catalog .catalog-block-right {
   float: left;
   width: 700px;
   margin-left: 20px;
@@ -191,14 +187,15 @@ footer {
   background-color: #a77e42;
 }
 
-.main-block-five-left {
+.info-block-left {
   float: left;
   width: 520px;
   min-height: 535px;
+  box-sizing: border-box;
   background-color: #f7cd08;
 }
 
-.main-block-five-right {
+.info-block-right {
   float: right;
   width: 300px;
   min-height: 535px;
@@ -297,7 +294,7 @@ footer {
   padding-right: 0;
 }
 
-.item {
+.categories-item {
   float: left;
   width: 300px;
   height: 120px;
@@ -306,13 +303,13 @@ footer {
   background-color: lightgreen;
 }
 
-.item:nth-child(3),
-.item:nth-child(6),
-.item:nth-child(5) {
+.categories-item:nth-child(3),
+.categories-item:nth-child(6),
+.categories-item:nth-child(5) {
   margin-right: 0;
 }
 
-.big-item {
+.categories-item-big {
   width: calc(300px * 2 + 20px);
   height: 260px;
   background-color: lightyellow;
@@ -360,19 +357,6 @@ footer {
   background-color: #ee3643;
 }
 
-.catalog-item {
-  float: left;
-  min-height: 320px;
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-}
-
-.catalog-item:nth-child(4n) {
-  margin-right: 0;
-}
-
 .logo-item {
   float: left;
   width: 220px;
@@ -389,27 +373,20 @@ footer {
   margin-right: 0;
 }
 
-.service {
-  float: left;
-  width: 940px;
-  box-sizing: border-box;
-  border: 1px dotted #666666;
-}
-
-.services-info {
+.services-block-one-info {
   float: left;
   box-sizing: border-box;
   border: 1px dotted #666666;
 }
 
-.other-two {
+.service-block-two {
   float: left;
   width: 240px;
   min-height: 180px;
   background-color: #229edc;
 }
 
-.button-item {
+.service-button {
   float: left;
   width: 240px;
   min-height: 60px;
@@ -419,26 +396,13 @@ footer {
   padding: 20px;
 }
 
-.other-three {
+.service-block-three {
   float: left;
   width: 700px;
   background-color: #f1ff92;
 }
 
-.delivery {
-  padding-left: 80px;
-  box-sizing: border-box;
-  border: 1px dotted #666666;
-}
-
-.delivery-info {
-  padding-left: 80px;
-  width: 275px;
-  box-sizing: border-box;
-  border: 1px dotted #666666;
-}
-
-.other-three-left {
+.service-block-delivery {
   float: left;
 }
 
@@ -446,18 +410,14 @@ footer {
   float: right;
 }
 
-.putton-company {
+.about-company-putton {
   float: left;
   min-height: 40px;
   width: 240px;
   background-color: #ff1f92;
 }
 
-.index-content-contacts {
-  float: left;
-}
-
-.index-content-map-write {
+.info-block-right-map-write {
   width: 300px;
   min-height: 240px;
   border: 1px dotted #666666;
@@ -468,9 +428,10 @@ footer {
   padding-bottom: 40px;
 }
 
-.putton-write {
+.write-putton {
   float: right;
   min-height: 40px;
+  box-sizing: border-box;
   background-color: #ff1f92;
 }
 
@@ -656,8 +617,8 @@ footer {
   background-color: red;
 }
 
-.main-catalog-block-down {
-  background-color: green;
+.info-block-incatalog {
+  background-color: #f2f6f8;
 }
 
 
@@ -673,8 +634,12 @@ footer {
 
 /*Зададим ширину списка товаров и отцентруем его*/
 
-.catalog-items {
+.catalog .catalog-items {
   width: 700px;
+  margin: 20px auto;
+}
+.main .catalog-items {
+  width: 940px;
   margin: 20px auto;
 }
 
@@ -682,6 +647,7 @@ footer {
 /* Зададим размеры, отступы и рамки элементу каталога, а также текстовые стили для него */
 
 .catalog-item {
+  float: left;
   position: relative;
   display: inline-block;
   width: 218px;
@@ -691,12 +657,16 @@ footer {
   line-height: 20px;
   font-weight: bold;
   text-align: center;
+  /*временно*/
+  background-color: #ffffff;
 }
 
-.catalog-item:nth-child(3) {
+.main .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
-
+.catalog .catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
 
 /* Зададим стили флажку "новинка", расположим его
 с помощью абсолютного позиционирования и ленточку зададим с помощью фона */
