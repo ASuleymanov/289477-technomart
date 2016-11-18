@@ -4,31 +4,36 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <div class="header-up clearfix">
+
+    <div class="header-up">
       <div class="container clearfix">
-        <div class="header-up-left clearfix">
-          <img class="header-tehnomart" src="img/tehnomart.png" width="10px" height="50px" alt="техномарт" />
-          <form class="search" action="index.html" method="post">
-            <label> <img src="icon-search.png" alt="" />Поиск:<input type="text" name="search" value=""></label>
-          </form>
-        </div>
-        <div class="header-up-right clearfix">
-          <a class="checkout" href="#">Оформить заказ</a>
-          <a class="basket" href="#"><img src="icon-basket.png" alt="" />Корзина:</a>
-          <a class="bookmark" href="#"><img src="icon-bookmark.png" alt="" />Закладки:</a>
-        </div>
+          <ul>
+            <li><a>ТЕХНОМАРТ</a></li>
+            <li>
+              <form action="index.html" method="post">
+              <label class="search">
+                <img src="img/icon-search.png" width="1px" height="1px" alt="поиск" />Поиск:<input type="text" name="search" value="">
+              </label>
+            </form>
+            </li>
+            <li><a class="bookmark"href="#"><img src="img/icon-bookmark.png" width="1px" height="1px" alt="" />Закладки:</a></li>
+            <li><a class="basket"href="#"><img src="img/icon-basket.png" width="1px" height="1px" alt="" />Корзина:</a></li>
+            <li><a href="#">Оформить заказ</a></li>
+          </ul>
       </div>
     </div>
     <div class="header-down clearfix">
-      <div class="container">
+      <div class="container clearfix">
         <div class="header-down-one clearfix">
           <div class="header-down-one-info clearfix">
             <p class="info">
-              Интернет-магазин строительных материалов и инструментов для ремонта
+              Интернет-магазин строительных материалов <br />и инструментов для ремонта
             </p>
           </div>
           <div class="header-down-one-contacts clearfix">
@@ -44,97 +49,70 @@
             <a class="enter" href="#"><img src="icon-login.png" alt="" />Войти</a>
           </div>
         </div>
-        <div class="header-down-two clearfix">
-          <div class="header-down-two-navigation clearfix">
-            <ul class="header-navigation clearfix">
-              <li>
-                <a class="navigation-item" href="#">Главная</a>
-              </li>
-              <li>
-                <a class="navigation-item" href="#">Компания</a>
-              </li>
-              <li>
-                <a class="navigation-item" href="#">Каталог</a>
-              </li>
-              <li>
-                <a class="navigation-item" href="#">Новости</a>
-              </li>
-              <li>
-                <a class="navigation-item" href="#">Спецпредложения</a>
-              </li>
-              <li>
-                <a class="navigation-item" href="#">Доставка</a>
-              </li>
-              <li>
-                <a class="navigation-item" href="#">Контакты</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
+    <div class="container clearfix">
+      <nav class="main-navigation">
+          <ul>
+            <li>
+              <a class="navigation-item" href="#">Главная</a>
+            </li>
+            <li>
+              <a class="navigation-item" href="#">Компания</a>
+            </li>
+            <li>
+              <a class="navigation-item" href="#">Каталог</a>
+            </li>
+            <li>
+              <a class="navigation-item" href="#">Новости</a>
+            </li>
+            <li>
+              <a class="navigation-item" href="#">Спецпредложения</a>
+            </li>
+            <li>
+              <a class="navigation-item" href="#">Доставка</a>
+            </li>
+            <li>
+              <a class="navigation-item" href="#">Контакты</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+
   </header>
   <main class="main">
       <div class="categories-block clearfix">
         <div class="container clearfix">
-          <div class="categories-item">
-            <img src="img/materials.png" alt="материалы" />
-            <p class="name-category">
-              Материалы
-            </p>
-            <a class="putton-shadow" href="#">на любой вкус</a>
+          <div class="categories-item clearfix">
+              <a class="btn" href="#">на любой вкус</a>
           </div>
           <div class="categories-item">
-            <img src="img/instrument.png" alt="инструмент" />
-            <p class="name-category">
-              Инструмент
-            </p>
-            <a class="putton-shadow" href="#">на все случае жизни</a>
+            <a class="btn" href="#">на все случае жизни</a>
           </div>
           <div class="categories-item">
-            <img src="img/technics.png" alt="техника" />
-            <p class="name-category">
-              Техника
-            </p>
-            <a class="putton-shadow" href="#">для стройки</a>
+            <a class="btn" href="#">для стройки</a>
           </div>
           <div class="categories-item-big clearfix">
-            <div class="punchers">
-              ПЕРФОРАТОРЫ
-              <p>
-                настоящие мужские игрушки
-              </p>
-            </div>
-            <a href="#">открыть каталог</a>
-
-            <img src="" width="" height="" alt="рабочий" />
+            <a class="btn"href="#">открыть каталог</a>
           </div>
           <div class="categories-item clearfix">
-            <img src="img/discount.png" width="auto" alt="скидка" />
-            <p class="name-category">
-              Скидка 50%
-            </p>
-            <a class="putton-shadow" href="#">на 350 товаров</a>
+            <a class="btn" href="#">на 350 товаров</a>
           </div>
           <div class="categories-item">
-            <img src="img/delivery.png" alt="доставка" />
-            <p class="name-category">
-              Доставка
-            </p>
-            <a class="putton-shadow" href="#">бесплатно</a>
+            <a class="btn" href="#">бесплатно</a>
           </div>
         </div>
-
       </div>
-      <div class="catalog-block-cap clearfix">
-        <div class="container clearfix">
-          <h2 class="popular-products">ПОПУЛЯРНЫЕ ТОВАРЫ:</h2>
-          <div>
-            <a class="all-products" href="#">все популярные товары</a>
-          </div>
+      <div class="container clearfix">
+        <div class="catalog-block-cap clearfix">
+            <h2 class="popular-products">ПОПУЛЯРНЫЕ ТОВАРЫ:</h2>
+            <div>
+              <a class="btn all-products" href="#">все популярные товары</a>
+            </div>
         </div>
-
       </div>
+
+
+
       <div class="catalog-block clearfix">
         <div class="container clearfix">
           <div class="catalog-items">
@@ -165,76 +143,70 @@
           </div>
         </div>
       </div>
-      <div class="factory-block-cap clearfix">
-        <div class="container clearfix">
+      <div class="container clearfix">
+        <div class="factory-block-cap clearfix">
           <h2 class="popular-factory">ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h2>
           <div>
-            <a class="all-factory" href="#">все производители</a>
+            <a class="btn all-factory" href="#">все производители</a>
           </div>
         </div>
+      </div>
+
+
+
+
       <div class="factory-block clearfix">
-        <div class="container clearfix">
-          <div class="logo-item">
-            <a href="#"><img src="img/bosch.jpg" width="auto" height="auto" alt="bosch"></a>
-          </div>
-          <div class="logo-item">
-            <a href="#"><img src="img/makita.jpg" alt="Makita"></a>
-          </div>
-          <div class="logo-item">
-            <a href="#"><img src="img/dewalt.jpg" alt="Dewalt"></a>
-          </div>
-          <div class="logo-item">
-            <a href="#"><img src="img/interscol.jpg" alt="Интерскол"></a>
-          </div>
-          <div class="logo-item">
-            <a href="#"><img src="img/hitachi.jpg" alt="Hitachi"></a>
-          </div>
-          <div class="logo-item">
-            <a href="#"><img src="img/lg.jpg" alt="LG"></a>
-          </div>
-          <div class="logo-item">
-            <a href="#"><img src="img/aeg.jpg" alt="AEG"></a>
-          </div>
-          <div class="logo-item">
-            <a href="#"><img src="img/metabo.jpg" alt="Metabo"></a>
-          </div>
+        <div class="container">
+          <ul>
+            <li>
+              <a class="factory-item"href="#"><img src="img/bosch.jpg" width="auto" height="auto" alt="bosch"></a>
+            </li>
+            <li>
+              <a class="factory-item"href="#"><img src="img/makita.jpg" width="auto" height="auto" alt="Makita"></a>
+            </li>
+            <li>
+              <a class="factory-item"href="#"><img src="img/dewalt.jpg" width="auto" height="auto" alt="Dewalt"></a>
+            </li>
+            <li>
+              <a class="factory-item"href="#"><img src="img/interscol.jpg" width="auto" height="auto" alt="Интерскол"></a>
+            </li>
+            <li>
+              <a class="factory-item"href="#"><img src="img/hitachi.jpg" width="auto" height="auto" alt="Hitachi"></a>
+            </li>
+            <li>
+              <a class="factory-item"href="#"><img src="img/lg.jpg" width="auto" height="auto" alt="LG"></a>
+            </li>
+            <li>
+              <a class="factory-item"href="#"><img src="img/aeg.jpg" width="auto" height="auto" alt="AEG"></a>
+            </li>
+            <li>
+              <a class="factory-item"href="#"><img src="img/metabo.jpg" width="auto" height="auto" alt="Metabo"></a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="services-block clearfix">
         <div class="container clearfix">
-          <div class="service-block-one clearfix">
-            <div class="services-block-one-info">
-              <h2>СЕРВИСЫ</h2>
-              <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чобы сделать ваши покупки приятными.</p>
-            </div>
-          </div>
-          <div class="service-block-two clearfix">
-            <a class="service-button" href="#">Доставка</a>
-            <a class="service-button" href="#">Гарантия</a>
-            <a class="service-button" href="#">Кредит</a>
-          </div>
-          <div class="service-block-three clearfix">
-            <div class="service-block-delivery clearfix">
-              <h2>ДОСТАВКА</h2>
-              <p class="delivery-info">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы не плохо заработаем, поднимая его на ваш этаж!
-              </p>
-            </div>
-            <img class="img-car" src="" alt="грузовичок" />
-          </div>
+
+          <ul class="sevice-block-menu clearfix">
+           <li><a class="btn"href="#delivery">Доставка</a></li>
+           <li><a class="btn"href="#guarentee">Гарантия</a></li>
+           <li><a class="btn"href="#credit">Кредит</a></li>
+       </ul>
         </div>
       </div>
       <div class="info-block clearfix">
         <div class="container clearfix">
           <div class="info-block-left">
-            <h2>КОМПАНИЯ «ТЕХНОМАРТ»</h2>
+            <!-- <h2>КОМПАНИЯ «ТЕХНОМАРТ»</h2>
             <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастробайтерах.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки Росси! Техномарт работает со многими транспортными компаниями</p>
             <ul>
               <li>Деловые линии</li>
               <li>Автотрейдинг</li>
               <li>ЖелДорЭкпедиция</li>
-            </ul>
-            <a class="about-company-putton" href="#">ПОДРОБНЕЕ О КОПАНИИ</a>
+            </ul> -->
+            <a class="btn about-company-putton" href="#">ПОДРОБНЕЕ О КОПАНИИ</a>
           </div>
           <div class="info-block-right clearfix">
               <h2>КОНТАКТЫ</h2>
@@ -243,7 +215,7 @@
               </p>
             <div class="info-block-right-map-write clearfix">
               <img class="map" src="img/map.png" alt="карта">
-              <a class="write-putton" href="#">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
+              <a class="btn write-putton" href="#">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
             </div>
           </div>
         </div>

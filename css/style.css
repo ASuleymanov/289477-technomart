@@ -1,37 +1,24 @@
 html,
 body {
+  min-width: 1122px;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-size: 16px;
+  min-width: 960px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
   font-family: "Open Sans", sans-serif;
   color: black;
   background: white;
 }
 
-.hidden {
-  display: none;
-}
-
-header {
-  background-color: green;
-  min-height: 320px;
-}
-
-main {
-  background-color: #61b4d;
-  height: 100%;
-}
-
-footer {
-  background-color: grey;
-  height: 100px;
-}
 
 .clearfix::after {
   content: "";
+
   display: table;
   clear: both;
 }
@@ -39,19 +26,202 @@ footer {
 .container {
   width: 940px;
   margin: 0 auto;
-  border: 1px solid #fff;
-  height: 100%;
+  padding: 0 10px;
+
+  border: 1px dotted #66666;
 }
 
 .header-up {
-  min-height: 50px;
-  background-color: #293449;
+  min-height: 40px;
+
+  background-color: #32425c;
+}
+
+.header-up ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
+}
+
+.header-up li {
+  display: inline-block;
+
+  font-size: 17px;
+  line-height: 18px;
+  vertical-align: top;
+}
+
+.header-up a,
+.search {
+  display: block;
+  padding: 15px 25px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+.header-up a:hover {
+  background: #212a3a;
+}
+.header-up li:nth-child(1) {
+  width: 220px;
+  background-color: #ee3643;
+}
+.header-up li:nth-child(1):hover {
+  background-color: #ca2c37;
+}
+
+.header-up li:last-child{
+  background-color: #63a63e;
+}
+
+.bookmark {
+  position: relative;
+
+  display: inline-block;
+  padding: 25px 20px;
+  padding-left: 60px;
+
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.bookmark:hover {
+  background-color: #212a3a;
+}
+
+.bookmark::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 5px;
+
+  width: 18px;
+  height: 18px;
+
+  background: #ff0000 url("img/sprite.png") no-repeat;
+  /* положение фона так, чтобы отображалась нужная иконка*/
+  background-position: -1px -1px;
+  opacity: 0.3;
+}
+/* изменение непрозрачности
+ псевдоэлемента при наведении на ссылку. */
+.bookmark:hover::before {
+  opacity: 1;
 }
 
 .header-down {
-  min-height: 275px;
+  min-height: 280px;
   background-color: #f1f5f7;
 }
+.header-down-one-info {
+  float: left;
+  width: 33.33%;
+  font-style: italic;
+
+}
+ .info {
+  padding: 10px;
+  margin-left: 25px;
+  margin-top: 35px;
+  color: #ee434f;
+}
+.phone {
+  width: 265px;
+  font-size: 21px;
+  padding: 10px;
+  margin-left: 25px;
+  margin-top: 45px;
+  min-height: 40px;
+  text-align: center;
+  color: #ee434f;
+  box-sizing: border-box;
+  border: 3px solid #ffffff;
+}
+
+.address {
+  font-size: 13px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px dotted #666666;
+}
+
+
+.enter {
+  float: right;
+  width: 120px;
+  padding: 10px;
+  margin-top: 45px;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.registration {
+  float: right;
+  width: 150px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 45px;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.enter a,
+.registration a {
+  display: block;
+  padding: 15px 25px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+.enter a:hover,
+.registration a {
+  background: #212a3a;
+}
+
+.header-down-one-contacts {
+  float: left;
+  width: 33.33%;
+
+}
+
+.header-down-one-user {
+  float: left;
+  width: 33.33%;
+}
+
+.info-block-left {
+  float: left;
+  width: 520px;
+  min-height: 435px;
+  margin-top: 80px;
+  background: url(../img/technomart-info.png)no-repeat;
+  background-color: #ffffff;
+}
+
+.info-block-right {
+  float: right;
+  width: 300px;
+  min-height: 535px;
+  background-color: #a77e42;
+}
+
+.materials {
+  background: url(../img/materials.png) no-repeat center;
+}
+
+.categories-item-big {
+  background: url(../img/worker.png) no-repeat center;
+}
+
 
 .main-block-for {
   background-color: #f1f5f7;
@@ -68,40 +238,108 @@ footer {
 }
 
 
-/*третий уровень сетки*/
 
-.header-up-left {
+
+.main-navigation {
   float: left;
-  width: 50%;
-  background-color: #f7cd08;
-}
-
-.header-up-right {
-  float: right;
-  width: 50%;
-  background-color: #a77e42;
-}
-
-.header-down-one {
-  min-height: 155px;
-  background-color: #f7d8ab;
-}
-
-.header-down-two {
-  min-height: 55px;
+  width: 940px;
+  min-height: 62px;
   background-color: #32425c;
 }
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
+}
+
+.main-navigation li {
+  display: inline-block;
+
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.main-navigation a {
+  display: block;
+  padding: 25px 25.1px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+.main-navigation a:hover {
+  background: #293449;
+}
+
 
 .categories-block {
+  margin-top: 60px;
+  margin-bottom: 55px;
   background-color: #9c8c75;
   min-height: 400px;
 }
 
 .catalog-block-cap,
 .factory-block-cap {
-  min-height: 90px;
+  margin-top: 20px;
+  text-align: center;
   background-color: #f7f3ec;
 }
+
+
+.popular-products,
+.popular-factory {
+  float: left;
+  border: 1px dotted #666666;
+}
+
+.all-products,
+.all-factory {
+  float: right;
+  margin-top: 15px;
+  margin-right: 25px;
+}
+
+/*универсальная кнопка*/
+.btn {
+  display: inline-block;
+  margin-right: 16px;
+  padding: 10px 33px;
+
+  font-weight: 700;
+  font-size: 14px;/*проверено*/
+  line-height: 18px;/*проверено*/
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  vertical-align: top;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ee3643;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #ca2c37;
+}
+
+.btn.disabled,
+.btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+  background-color: #000000;
+}
+
+
 
 .catalog-block {
   background-color: #f7c172;
@@ -113,10 +351,7 @@ footer {
   min-height: 400px;
 }
 
-.services-block {
-  background-color: #f2f6f8;
-  min-height: 400px;
-}
+
 
 .info-block {
   background-color: #9c8c75;
@@ -166,134 +401,6 @@ footer {
   background-color: #a77e42;
 }
 
-
-/*четвертый уровень сетки*/
-
-.header-down-one-info {
-  float: left;
-  width: 33.33%;
-  background-color: #a77e42;
-}
-
-.header-down-one-contacts {
-  float: left;
-  width: 33.33%;
-  background-color: #f7cd08;
-}
-
-.header-down-one-user {
-  float: left;
-  width: 33.33%;
-  background-color: #a77e42;
-}
-
-.info-block-left {
-  float: left;
-  width: 520px;
-  min-height: 535px;
-  box-sizing: border-box;
-  background-color: #f7cd08;
-}
-
-.info-block-right {
-  float: right;
-  width: 300px;
-  min-height: 535px;
-  background-color: #a77e42;
-}
-
-
-/*выше 4-го уровня*/
-
-.header-tehnomart,
-.search {
-  float: left;
-  width: 220px;
-  border: 1px dotted #666666;
-  box-sizing: border-box;
-}
-
-.bookmark {
-  float: right;
-  width: 140px;
-  min-height: 40px;
-  text-align: center;
-  padding-top: 3px;
-  box-sizing: border-box;
-  border: 1px dotted #666666;
-}
-
-.basket {
-  float: right;
-  width: 140px;
-  min-height: 40px;
-  text-align: center;
-  padding-top: 3px;
-  box-sizing: border-box;
-  border: 1px dotted #666666;
-}
-
-.checkout {
-  float: right;
-  width: 150px;
-  min-height: 40px;
-  text-align: center;
-  padding-top: 10px;
-  box-sizing: border-box;
-  background-color: #63a63e;
-}
-
-.phone {
-  width: 240px;
-  min-height: 45px;
-  text-align: center;
-  padding-top: 10px;
-  border: 1px dotted #666666;
-}
-
-.address {
-  text-align: center;
-  padding-top: 10px;
-  background-color: #cae0eb;
-  border: 1px dotted #666666;
-}
-
-.enter {
-  float: right;
-  width: 120px;
-  min-height: 50px;
-  margin-right: 10px;
-  text-align: center;
-  padding-top: 12.5px;
-  box-sizing: border-box;
-  border: 1px dotted #666666;
-}
-
-.registration {
-  float: right;
-  width: 150px;
-  min-height: 50px;
-  text-align: center;
-  padding-top: 12.5px;
-  box-sizing: border-box;
-  border: 1px dotted #666666;
-}
-
-.header-navigation {
-  list-style: none;
-  background-color: #f7cd08;
-}
-
-.navigation-item {
-  float: left;
-  padding-top: 12.5px;
-  padding-right: 50px;
-}
-
-.navigation-item:nth-child(6) {
-  padding-right: 0;
-}
-
 .categories-item {
   float: left;
   width: 300px;
@@ -301,6 +408,23 @@ footer {
   margin-right: 20px;
   margin-bottom: 20px;
   background-color: lightgreen;
+
+}
+.categories-item:nth-child(1){
+  background: url(../img/materials.png) no-repeat center;
+}
+.categories-item:nth-child(2){
+  background: url(../img/instrument.png) no-repeat center;
+}
+
+.categories-item:nth-child(3){
+  background: url(../img/technics.png) no-repeat center;
+}
+.categories-item:nth-child(5){
+  background: url(../img/discount.png) no-repeat center;
+}
+.categories-item:nth-child(6){
+  background: url(../img/delivery.png) no-repeat center;
 }
 
 .categories-item:nth-child(3),
@@ -315,86 +439,98 @@ footer {
   background-color: lightyellow;
   float: left;
   margin-right: 20px;
+  margin-bottom: 0;
+}
+.categories-item:nth-child(6) {
+  margin-bottom: 0;
+}
+.categories-item-big .btn{
+  margin-left: 20px;
+  margin-top: 200px;
+}
+.categories-item .btn{
+  margin-left: 20px;
+  margin-top: 65px;
 }
 
-.name-category {
-  margin-left: 22px;
+
+.factory-block ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
 }
 
-.putton-shadow {
+
+.factory-item {
   float: left;
-  width: 135px;
-  min-height: 40px;
-  margin-left: 25px;
-  text-align: center;
-  background-color: #ff1f92;
-}
-
-.punchers {
-  border: 1px dotted #666666;
-}
-
-.cap-products,
-.cap-factory {
-  background-color: #f7f3ec;
-  border: 1px dotted #666666;
-}
-
-.popular-products,
-.popular-factory {
-  float: left;
-  border: 1px dotted #666666;
-}
-
-.all-products,
-.all-factory {
-  float: right;
-  width: 250px;
-  margin-top: 24px;
-  min-height: 40px;
-  padding-top: 14px;
-  text-align: center;
-  background-color: #ee3643;
-}
-
-.logo-item {
-  float: left;
-  width: 220px;
+  min-width: 220px;
   min-height: 145px;
   margin-right: 20px;
   margin-bottom: 20px;
-  background-color: #ffffff;
   text-align: center;
   vertical-align: middle;
+  border: 1px solid #e7e7e7;
+  background-color: ;
 }
 
-.logo-item:nth-child(4),
-.logo-item:nth-child(8) {
+.factory-item:nth-child(4n)
+
+ {
   margin-right: 0;
 }
-
-.services-block-one-info {
-  float: left;
-  box-sizing: border-box;
-  border: 1px dotted #666666;
+.factory-item:nth-child(5),
+.factory-item:nth-child(6)
+.factory-item:nth-child(7)
+.factory-item:nth-child(8) {
+  margin-bottom: 0;
 }
 
-.service-block-two {
-  float: left;
-  width: 240px;
-  min-height: 180px;
-  background-color: #229edc;
+.services-block {
+  padding-top: 100px;
+  min-height: 460px;
+  border: 5px solid black;
+  background: url("../img/service.png") no-repeat center;
+  background-color: #f2f6f8;
 }
 
-.service-button {
-  float: left;
+.sevice-block-menu{
+  margin-top: 120px;
   width: 240px;
-  min-height: 60px;
-  background-color: #ff1f92;
-  border: 1px dotted #666666;
-  box-sizing: border-box;
+  padding: 0px;
+}
+.sevice-block-menu ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
+}
+
+.sevice-block-menu li {
+  display: block;
+  font-size: 21px;
+  line-height: 30px;
+
+
+}
+
+.sevice-block-menu a {
+  min-width: 195px;
   padding: 20px;
+  text-align:left;
+  text-transform:capitalize;
+  color: #ffffff;
+  background-color: #32425c;
+
+
 }
+
+
+
+
+
 
 .service-block-three {
   float: left;
@@ -412,9 +548,8 @@ footer {
 
 .about-company-putton {
   float: left;
-  min-height: 40px;
-  width: 240px;
-  background-color: #ff1f92;
+  margin-top: 330px;
+  width: 150px;
 }
 
 .info-block-right-map-write {
@@ -429,10 +564,7 @@ footer {
 }
 
 .write-putton {
-  float: right;
-  min-height: 40px;
-  box-sizing: border-box;
-  background-color: #ff1f92;
+ width: 230px;
 }
 
 .footer-tehnomart {
@@ -489,6 +621,7 @@ footer {
   width: 40%;
   border: 1px dotted #666666;
 }
+.service-block-two
 
 
 /*catalog-page*/
@@ -652,7 +785,7 @@ footer {
   display: inline-block;
   width: 218px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border: 1px solid #ccc;
   line-height: 20px;
   font-weight: bold;
