@@ -7,10 +7,10 @@ body {
 
 body {
   min-width: 960px;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 17px;
   line-height: 24px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Cuprum", sans-serif;
   color: black;
   background: white;
 }
@@ -30,6 +30,45 @@ body {
 
   border: 1px dotted #66666;
 }
+/*универсальная кнопка*/
+.btn {
+  display: inline-block;/*кнопки могли располагаться на одной строке*/
+  padding: 10px 30px;/*внутренние отступы*/
+  margin-right: 10px;
+
+  font-weight: 400;
+  font-size: 14px;/*проверено*/
+  line-height: 18px;/*проверено*/
+  font-family: "Cuprum", sans-serif;
+  vertical-align: top; /*вертикальное выравнивание для блочно-строчных кнопок*/
+  text-align: center; /*выравнивание текста внутри кнопок по центру*/
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  /*сбросить все возможные свойства по умолчанию*/
+
+  background-color: #ee3643;
+  border: none;
+  cursor: pointer;
+}
+/*стили наведения на кнопку и стили активной кнопки по стайлгайду*/
+.btn:hover,
+.btn:active {
+  background-color: #ca2c37;
+}
+/* стили для кнопки, в случае если она неактивна */
+.btn.disabled,
+.btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+  background-color: #000000;
+}
+
 
 .header-up {
   min-height: 40px;
@@ -47,6 +86,7 @@ body {
 
 .header-up li {
   display: inline-block;
+  font-weight: 400;
 
   font-size: 17px;
   line-height: 18px;
@@ -56,7 +96,7 @@ body {
 .header-up a,
 .search {
   display: block;
-  padding: 15px 25px;
+  padding: 15px 27px;
 
   color: #ffffff;
   text-decoration: none;
@@ -65,6 +105,7 @@ body {
   background: #212a3a;
 }
 .header-up li:nth-child(1) {
+  text-align: center;
   width: 220px;
   background-color: #ee3643;
 }
@@ -73,6 +114,8 @@ body {
 }
 
 .header-up li:last-child{
+  float:right;
+
   background-color: #63a63e;
 }
 
@@ -80,11 +123,11 @@ body {
   position: relative;
 
   display: inline-block;
-  padding: 25px 20px;
-  padding-left: 60px;
+  padding: 25px 15px;
+  padding-left: 40px;
 
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 17px;
+  line-height: 18px;
   vertical-align: top;
   color: #ffffff;
   text-decoration: none;
@@ -121,6 +164,8 @@ body {
 .header-down-one-info {
   float: left;
   width: 33.33%;
+  font-size: 16px;
+  line-height: 23px;
   font-style: italic;
 
 }
@@ -132,11 +177,13 @@ body {
 }
 .phone {
   width: 265px;
-  font-size: 21px;
+  font-size: 21px;/*проверено*/
+  line-height: 18px;/*проверено*/
   padding: 10px;
   margin-left: 25px;
   margin-top: 45px;
   min-height: 40px;
+  vertical-align: top;
   text-align: center;
   color: #ee434f;
   box-sizing: border-box;
@@ -144,66 +191,63 @@ body {
 }
 
 .address {
-  font-size: 13px;
-  box-sizing: border-box;
-  text-align: center;
+  width: 265px;
+  margin-left: 25px;
+  font-weight: 400;
+  font-size: 14px;/*проверено*/
+  line-height: 24px;/*проверено*/
+  font-family: "Cuprum", sans-serif;
+  vertical-align: to; /*вертикальное выравнивание для блочно-строчных кнопок*/
+  text-align: cente; /*выравнивание текста внутри по центру*/
+
   border: 1px dotted #666666;
 }
 
 
-.enter {
-  float: right;
-  width: 120px;
-  padding: 10px;
-  margin-top: 45px;
-  text-decoration: none;
-  text-align: center;
-  box-sizing: border-box;
-  background-color: #ffffff;
-}
 
-.registration {
-  float: right;
-  width: 150px;
-  padding: 10px;
-  margin-left: 10px;
-  margin-top: 45px;
-  text-decoration: none;
-  text-align: center;
-  box-sizing: border-box;
-  background-color: #ffffff;
-}
-
-.enter a,
-.registration a {
-  display: block;
-  padding: 15px 25px;
-
-  color: #ffffff;
-  text-decoration: none;
-}
-.enter a:hover,
-.registration a {
-  background: #212a3a;
-}
 
 .header-down-one-contacts {
   float: left;
   width: 33.33%;
 
 }
-
 .header-down-one-user {
-  float: left;
+  float: right;
+  margin-top: 45px;
   width: 33.33%;
+  min-height: 50px;
+
+
+  background-color: red;
 }
+
+
+
+.header-down-one-user a {
+
+  padding: 16px 27px;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 21px;/* проверено */
+  line-height: 18px;/* проверено */
+  font-family: "Cuprum", sans-serif;
+  vertical-align: top; /* вертикальное выравнивание для блочно-строчных кнопок */
+  text-align: center; /* выравнивание текста внутри кнопок по центру */
+  text-transform: none;
+  background-color: #ffffff;
+  color: black;
+}
+
+.header-down-one-user a:nth-child(2){
+  margin-right: 0px;
+}
+
 
 .info-block-left {
   float: left;
   width: 520px;
   min-height: 435px;
   margin-top: 80px;
-  background: url(../img/technomart-info.png)no-repeat;
   background-color: #ffffff;
 }
 
@@ -243,7 +287,7 @@ body {
 .main-navigation {
   float: left;
   width: 940px;
-  min-height: 62px;
+  min-height: 60px;
   background-color: #32425c;
 }
 .main-navigation ul {
@@ -256,21 +300,32 @@ body {
 
 .main-navigation li {
   display: inline-block;
-
-  font-size: 16px;
-  line-height: 20px;
-  vertical-align: top;
 }
 
 .main-navigation a {
   display: block;
-  padding: 25px 25.1px;
+  padding: 26px 25px;
+
+  font-weight: 400;
+  text-transform: none;
+  font-size: 17px;/* проверено */
+  line-height: 17px;/* проверено */
+  font-family: "Cuprum", sans-serif;
+  vertical-align: top; /* вертикальное выравнивание для блочно-строчных кнопок */
+  text-align: center; /* выравнивание текста внутри кнопок по центру */
+  text-transform: none;
+
 
   color: #ffffff;
   text-decoration: none;
 }
+
 .main-navigation a:hover {
   background: #293449;
+}
+
+.main-navigation a:active {
+  background: #1d2739;
 }
 
 
@@ -302,42 +357,7 @@ body {
   margin-right: 25px;
 }
 
-/*универсальная кнопка*/
-.btn {
-  display: inline-block;
-  margin-right: 16px;
-  padding: 10px 33px;
 
-  font-weight: 700;
-  font-size: 14px;/*проверено*/
-  line-height: 18px;/*проверено*/
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
-  vertical-align: top;
-  text-align: center;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  background-color: #ee3643;
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover,
-.btn:active {
-  background-color: #ca2c37;
-}
-
-.btn.disabled,
-.btn:disabled {
-  cursor: default;
-  opacity: 0.5;
-}
-
-.btn.disabled:hover,
-.btn:disabled:hover {
-  background-color: #000000;
-}
 
 
 
@@ -410,6 +430,28 @@ body {
   background-color: lightgreen;
 
 }
+.name-category{
+  padding-left: 23px;
+  padding-top: 20px;
+
+
+  font-size: 24px;/* проверено */
+  line-height: 30px;/* проверено */
+  font-weight: 700; /* что-то не так! */
+  color: #ffffff;
+}
+.categories-item-big .name-category{
+  padding-left: 24px;
+  font-size: 36px;/* проверено */
+  line-height: 30px;/* проверено */
+  font-weight: 500; /* что-то не так! */
+}
+.categories-item-big .name-category p{
+  font-size: 18px;/* проверено */
+  line-height: 24px;/* проверено */
+  font-weight: 100; /* что-то не так! */
+}
+
 .categories-item:nth-child(1){
   background: url(../img/materials.png) no-repeat center;
 }
@@ -434,23 +476,39 @@ body {
 }
 
 .categories-item-big {
+  float: left;
   width: calc(300px * 2 + 20px);
   height: 260px;
-  background-color: lightyellow;
-  float: left;
   margin-right: 20px;
   margin-bottom: 0;
+  background-color: lightyellow;
+
+
 }
 .categories-item:nth-child(6) {
   margin-bottom: 0;
 }
 .categories-item-big .btn{
-  margin-left: 20px;
-  margin-top: 200px;
+  font-size: 14px;/* проверено */
+  line-height: 18px;/* проверено */
+  font-weight: 200; /* что-то не так! */
+  position: relative;
+  width: 195px;
+  margin: 90px 20px;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+  border-radius: 3px;
 }
-.categories-item .btn{
-  margin-left: 20px;
-  margin-top: 65px;
+.categories-item .btn {
+  font-size: 14px;/* проверено */
+  line-height: 18px;/* проверено */
+  font-weight: 200; /* что-то не так! */
+  position: relative;
+  min-width: 135px;
+  margin: 10px 20px;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  border-radius: 3px;
 }
 
 
