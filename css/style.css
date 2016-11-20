@@ -243,20 +243,7 @@ body {
 }
 
 
-.info-block-left {
-  float: left;
-  width: 520px;
-  min-height: 435px;
-  margin-top: 80px;
-  background-color: #ffffff;
-}
 
-.info-block-right {
-  float: right;
-  width: 300px;
-  min-height: 535px;
-  background-color: #a77e42;
-}
 
 .materials {
   background: url(../img/materials.png) no-repeat center;
@@ -278,6 +265,7 @@ body {
 
 .footer-down {
   min-height: 110px;
+  color: #ffffff;
   background-color: #293449;
 }
 
@@ -393,31 +381,32 @@ body {
 
 .footer-up-left {
   float: left;
-  width: 300px;
-  background-color: #f7cd08;
+  width: 325px;
 }
 
 .footer-up-right {
   float: right;
-  width: 640px;
-  background-color: #a77e42;
+  width: 615px;
 }
 
 .footer-down-one {
   float: left;
   width: 33.33%;
+  margin-top: 40px;
   background-color: #a77e42;
 }
 
 .footer-down-two {
   float: left;
   width: 28%;
+  margin-top: 40px;
   background-color: #f7cd08;
 }
 
 .footer-down-three {
-  float: left;
+  float: right;
   width: 38%;
+  margin-top: 20px;
   background-color: #a77e42;
 }
 
@@ -533,9 +522,7 @@ body {
   background-color: ;
 }
 
-.factory-item:nth-child(4n)
-
- {
+.factory-item:nth-child(4n) {
   margin-right: 0;
 }
 .factory-item:nth-child(5),
@@ -546,14 +533,30 @@ body {
 }
 
 .services-block {
-  padding-top: 100px;
+  padding-top: 70px;
   min-height: 460px;
   border: 5px solid black;
   background: url("../img/service.png") no-repeat center;
   background-color: #f2f6f8;
 }
+.service-block-one {
+  float: left;
+  width: 100%;
+  border: 1px dotted black;
+}
+
+
+
+.services-block-one-info p{
+  width: 400px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
 
 .sevice-block-menu{
+  float: left;
   margin-top: 120px;
   width: 240px;
   padding: 0px;
@@ -570,97 +573,163 @@ body {
   display: block;
   font-size: 21px;
   line-height: 30px;
-
-
 }
 
 .sevice-block-menu a {
   min-width: 195px;
   padding: 20px;
   text-align:left;
-  text-transform:capitalize;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+  text-transform: none;
+
   color: #ffffff;
   background-color: #32425c;
 
 
 }
 
-
-
-
-
-
 .service-block-three {
-  float: left;
-  width: 700px;
-  background-color: #f1ff92;
-}
-
-.service-block-delivery {
-  float: left;
-}
-
-.img-car {
   float: right;
+  margin-right: 343px;
+  width: 275px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #f1ff92;
+  border: 1px dotted black;
 }
+
+.info-block-left {
+  float: left;
+  width: 520px;
+  min-height: 370px;
+  margin-top: 80px;
+  background-color: #ffffff;
+}
+
+.info-block-left h2{
+  float:left;
+}
+.info-block-left p{
+  float:left;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.info-block-right {
+  float: right;
+  width: 300px;
+  min-height: 370px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+}
+.info-block-right h2{
+  float:left;
+}
+.info-block-right p{
+  float:left;
+  width: 180px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
 
 .about-company-putton {
-  float: left;
-  margin-top: 330px;
-  width: 150px;
-}
-
-.info-block-right-map-write {
-  width: 300px;
-  min-height: 240px;
-  border: 1px dotted #666666;
-}
-
-.map {
-  float: right;
-  padding-bottom: 40px;
+  margin-top: 165px;
 }
 
 .write-putton {
- width: 230px;
+  margin-top: 40px;
+  width: 240px;
 }
 
-.footer-tehnomart {
-  float: left;
-  width: 220px;
-  min-height: 20 border: 1px dotted #666666;
+.footer-up-left h1 {
+  position: relative;
+
+  display: inline-block;
+  margin: 0;
+  min-height: 60px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  background-color: #ee3643;
+  padding: 20px 40px;/*внутренние отступы*/
+  font-family: "Cuprum", sans-serif;
+  vertical-align: top; /*вертикальное выравнивание для блочно-строчных кнопок*/
+  text-align: center; /*выравнивание текста внутри кнопок по центру*/
+  color: #ffffff;
+  text-decoration: none;
   box-sizing: border-box;
+}
+
+.footer-up-left h1:hover {
+  background-color: #ca2c37;
 }
 
 .footer-address {
   float: left;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
   border: 1px dotted #666666;
   box-sizing: border-box;
 }
 
-.footer-navigation-one {
-  float: right;
-  list-style: none;
-  box-sizing: border-box;
-  text-align: center;
-  margin: 0px;
-  border: 1px dotted #666666;
-}
-
-.footer-navigation-one:nth-child(5) {
-  margin-right: 0;
-}
-
+.footer-navigation-one,
 .footer-navigation-two {
   float: right;
+  border: 2px dotted black;
+}
+.footer-navigation-one ul,
+.footer-navigation-two ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
-  border: 1px dotted #666666;
+  font-size: 0;
+}
+.footer-navigation-one li,
+.footer-navigation-two li {
+  display: inline-block;
+
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: top;
+
+}
+
+.footer-navigation-one a,
+.footer-navigation-two a {
+  display: block;
+  padding-left: 30px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-navigation-two a {
+  color: #92856d;
+}
+
+.footer-navigation-one a:hover,
+.footer-navigation-two a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-navigation-one a:nth-child(1){
+  padding-right: 0px;
 }
 
 .company {
   float: left;
   border: 1px dotted #666666;
 }
+
 
 .img-social {
   float: left;
@@ -671,15 +740,17 @@ body {
 .footer-mail {
   float: left;
   width: 50%;
+  margin: 0;
+  padding: 0;
   border: 1px dotted #666666;
 }
 
 .copyright {
   float: left;
-  width: 40%;
+  width: 45%;
   border: 1px dotted #666666;
 }
-.service-block-two
+
 
 
 /*catalog-page*/
