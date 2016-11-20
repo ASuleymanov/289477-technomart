@@ -263,14 +263,6 @@ body {
   background-color: #32425c;
 }
 
-.footer-down {
-  min-height: 110px;
-  color: #ffffff;
-  background-color: #293449;
-}
-
-
-
 
 .main-navigation {
   float: left;
@@ -387,27 +379,6 @@ body {
 .footer-up-right {
   float: right;
   width: 615px;
-}
-
-.footer-down-one {
-  float: left;
-  width: 33.33%;
-  margin-top: 40px;
-  background-color: #a77e42;
-}
-
-.footer-down-two {
-  float: left;
-  width: 28%;
-  margin-top: 40px;
-  background-color: #f7cd08;
-}
-
-.footer-down-three {
-  float: right;
-  width: 38%;
-  margin-top: 20px;
-  background-color: #a77e42;
 }
 
 .categories-item {
@@ -649,7 +620,7 @@ body {
   width: 240px;
 }
 
-.footer-up-left h1 {
+.footer-up h1 {
   position: relative;
 
   display: inline-block;
@@ -672,7 +643,7 @@ body {
   background-color: #ca2c37;
 }
 
-.footer-address {
+.footer-up p {
   float: left;
   font-weight: 400;
   font-size: 18px;
@@ -720,35 +691,101 @@ body {
   text-decoration: underline;
 }
 
-
 .footer-navigation-one a:nth-child(1){
   padding-right: 0px;
 }
 
-.company {
-  float: left;
-  border: 1px dotted #666666;
+.footer-down {
+  padding-top: 60px;
+  padding-bottom: 36px;
+
+  font-size: 16px;
+  line-height: 18px;
+
+  max-height: 110px;
+  color: #ffffff;
+  background-color: #293449;
 }
 
-
-.img-social {
+.footer-contacts {
   float: left;
-  padding: 1%;
-  border: 1px dotted #666666;
+  width: 230px;
+  margin-right: 160px;
+
+  border:1px dotted white;
 }
 
-.footer-mail {
+.footer-social {
   float: left;
-  width: 50%;
+  width: 180px;
+
+  text-align: center;
+
+}
+.footer-social p {
   margin: 0;
-  padding: 0;
-  border: 1px dotted #666666;
+  margin-bottom: 15px;
+}
+.social-btn {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin: 0 2px;
+
+  font-size: 0;
+  vertical-align: top;
+  text-decoration: none;
+
+  background: #212a3a url("img/sprite.png") no-repeat center;
+}
+.social-btn:hover {
+  background-color: #ee3643;
 }
 
-.copyright {
+.social-btn-vk {
+  background-position: 9px -447px;/*задать*/
+}
+
+.social-btn-fb {
+  background-position: 15px -171px;/*задать*/
+}
+
+.social-btn-inst {
+  background-position: 12px -313px;/*задать*/
+}
+
+
+.footer-mail-copyright {
+  float: right;
+  max-width: 300px;
+  margin-right: 15px;
+
+}
+.mail{
   float: left;
-  width: 45%;
-  border: 1px dotted #666666;
+  margin-right: 20px;/*50px*/
+  border:1px dotted white;
+}
+.copyright{
+  float: right;
+  border:1px dotted whit;
+}
+
+.footer-mail-copyright p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+.footer-mail-copyright a {
+  color: #c6a771;
+  text-decoration: none;
+}
+
+.footer-mail-copyright a:hover {
+  text-decoration:underline;
+}
+.footer-mail-copyright a:active {
+  color: #ee3643;
+  text-decoration: none;
 }
 
 
