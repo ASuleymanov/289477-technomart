@@ -222,6 +222,7 @@ body {
   text-align: center;
   width: 220px;
   background-color: #ee3643;
+  box-shadow: 0 5px 0 0 #9a212a;
 }
 .header-up li:nth-child(1):hover {
   background-color: #ca2c37;
@@ -240,6 +241,48 @@ body {
   text-align: center;
   background-color: #63a63e;
 }
+
+form{
+  background-color: #293449;
+}
+input{
+  height: 50%;
+  background-color: transparent;
+  padding-left: 0px;
+  border: none;
+  position: relative;
+  height: 22px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+  /* background-image: url(http://s1.iconbird.com/ico/0612/GooglePlusInterfaceIcons/w128h1281338911651zoom.png); */
+  opacity: 0.7;
+}
+input:hover {
+  opacity: 1;
+  background-color: #ffffff;
+}
+label {
+/*   position: absolute;
+color: #fff; */
+  left: 50px;
+  font-size: 17px;
+  line-height: 18px;
+}
+input:focus {
+  outline: none;
+  background-color: white;
+  color: #000;
+  opacity: 1;
+}
+input:focus + label {
+  display: none;
+}
+input:focus {
+  background-image: url(Перфоратор);
+}
+
+
 
 
 .search,
@@ -521,27 +564,32 @@ body {
 
   list-style: none;
   font-size: 0;
+  box-shadow: 0 5px 0 0 #293449;
 }
 
 .main-navigation li {
+  /* display: inline-block;
+
+  font-size: 17px;проверено
+  line-height: 17px;проверено
+  vertical-align: top; */ /* вертикальное выравнивание для блочно-строчных кнопок */
+
   display: inline-block;
-
-  font-size: 17px;/* проверено */
-  line-height: 17px;/* проверено */
-  vertical-align: top; /* вертикальное выравнивание для блочно-строчных кнопок */
-
+  vertical-align: top;
+  font-size: 17px;
+  line-height: 18px;
 }
 
 .main-navigation a {
-  display: block;
-  padding: 20px 36px;
-  color: #ffffff;
-  text-decoration: none;
-}
-/* .main-navigation a:nth-child(1) {
-  padding-left:53px;
-} */
+display: block;
+padding: 21px 33px;
+color: #ffffff;
+text-decoration: none;
 
+  display: block;
+  padding: 21px 33px;
+  color: #ffffff;
+}
 
 .main-navigation a:hover {
   background: #293449;
@@ -639,7 +687,7 @@ body {
 
 .footer-up-right {
   float: right;
-  margin-top: 28px;
+  margin-top: 0px;
   width: 615px;
 }
 
@@ -872,7 +920,8 @@ body {
 
 .service-block-menu {
   float: left;
-
+  padding-left: 0;
+  padding-top: 20px;
   width: 240px;
 
 }
@@ -923,15 +972,15 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  background-color: #f1ff92;
-  border: 1px dotted black;
+
 }
 
 
 
 .index-content {
+
   margin-bottom: 0px;
-  padding: 80px 120px;
+  padding: 72px 120px;
 
   color: #000000;
 }
@@ -981,7 +1030,7 @@ body {
 }
 .index-content-left .btn {
 
-  width: 110px;
+  padding: 8px 45px;
 }
 .index-content-right .btn {
   clear: both;
@@ -1021,43 +1070,60 @@ body {
   border: 1px dotted #666666;
   box-sizing: border-box;
 }
+.footer-up-right
+
+
+
+
+
+
+/**/
 
 .footer-navigation-one {
-  float: left;
-  padding-left: 65px;
-  width: 570px;
-  border: 2px dotted black;
-}
-.footer-navigation-two {
-  float: left;
-  padding-left: 90px;
-  width: 570px;
-  border: 2px dotted black;
-}
-.footer-navigation-one ul,
-.footer-navigation-two ul {
+  width: 555px;
+  float: right;
   margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 0;
+  margin-bottom: 0px;
+  border: 2px dotted black;
 }
-.footer-navigation-one li,
-.footer-navigation-two li {
+.footer-navigation-one li {
   display: inline-block;
-
-  font-size: 18px;
-  line-height: 24px;
-  vertical-align: top;
-
+  margin-top:38px;
+  margin-right: 48px;
 }
-
+.footer-navigation-one li:last-child{
+  margin-right: 0;
+}
 .footer-navigation-one a {
-  display: block;
-  margin-right: 40px;
+  padding-left: 10px;
   color: #ffffff;
   text-decoration: none;
 }
+
+
+
+
+.footer-navigation-two {
+  float: right;
+  padding: 0;
+  width: 520px;
+  border: 2px dotted black;
+}
+
+.footer-navigation-two li {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 60px;
+
+}
+.footer-navigation-two li:last-child{
+  margin-right: 0;
+}
+
+
 .footer-navigation-two a {
+  padding
+  text-decoration: none;
   color: #92856d;
 }
 
@@ -1066,9 +1132,8 @@ body {
   text-decoration: underline;
 }
 
-.footer-navigation-one a:nth-child(1){
-  padding-right: 0px;
-}
+
+
 
 .footer-down {
   padding-top: 35px;
