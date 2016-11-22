@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
   <body>
-    <header>
-      <div class="header-up">
-        <div class="container clearfix">
+    <header class="main-header">
+      <div class="container clearfix">
+        <div class="header-up clearfix">
           <ul>
             <li><a>ТЕХНОМАРТ</a></li>
             <li>
@@ -21,9 +21,10 @@
                 </label>
               </form>
             </li>
-            <li><a class="bookmark icon-bookmark"href="#">Закладки:</a></li>
-            <li><a class="basket icon-basket"href="#">Корзина:</a></li>
+
             <li><a href="#">Оформить заказ</a></li>
+            <li><a class="basket icon-basket"href="#">Корзина: 0</a></li>
+            <li><a class="bookmark icon-bookmark"href="#">Закладки: 0</a></li>
           </ul>
         </div>
       </div>
@@ -43,9 +44,10 @@
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
               </p>
             </div>
-            <div class="header-down-one-user icon-login clearfix">
-              <a class="btn enter" href="#">Войти</a>
+            <div class="header-down-one-user clearfix">
+               <a class="btn enter icon-login" href="#">Войти</a>
               <a class="btn registration" href="#">Регистрация</a>
+
             </div>
           </div>
         </div>
@@ -58,10 +60,10 @@
               <li>
                 <a class="navigation-item" href="#">Компания</a>
               </li>
-              <li>
+               <li>
                 <a class="navigation-item" href="#">Каталог</a>
               </li>
-              <li>
+              <!--<li>
                 <a class="navigation-item" href="#">Новости</a>
               </li>
               <li>
@@ -72,7 +74,7 @@
               </li>
               <li>
                 <a class="navigation-item" href="#">Контакты</a>
-              </li>
+              </li> -->
             </ul>
           </nav>
         </div>
@@ -81,7 +83,7 @@
         <div class="categories-block clearfix">
           <div class="container clearfix">
             <div class="categories-item materials">
-              <div class=" name-category">
+              <div class="name-category">
                 Материалы
               </div>
               <a class="btn" href="#">на любой вкус</a>
@@ -200,11 +202,10 @@
             <div class="service-block-one clearfix">
               <div class="services-block-one-info">
                 <h2>СЕРВИСЫ</h2>
-                <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чобы сделать ваши покупки приятными.</p>
+                <p>Хороший интернет-магазин отличается от плохого не только ценами!<br> Мы стараемся изо всех сил, чобы сделать ваши покупки приятными.</p>
               </div>
             </div>
-
-            <ul class="sevice-block-menu clearfix">
+            <ul class="service-block-menu clearfix">
               <li><a class="btn"href="#delivery">Доставка</a></li>
               <li><a class="btn"href="#guarentee">Гарантия</a></li>
               <li><a class="btn"href="#credit">Кредит</a></li>
@@ -236,7 +237,7 @@
               </ul>
               <a class="btn" href="#">ПОДРОБНЕЕ О КОПАНИИ</a>
             </div>
-            <div class="index-content-right clearfix">
+            <div class="index-content-right">
               <h2 class="index-content-title">КОНТАКТЫ</h2>
               <p>
                 Вы можете забрать товар сами,<br> заехав в наш офис:

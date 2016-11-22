@@ -1,16 +1,10 @@
-html,
-body {
-  min-width: 1122px;
-  margin: 0;
-  padding: 0;
-}
+
 
 body {
   min-width: 960px;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
-  font-family: "PT Sans","Arial", sans-serif;
   font-family: "Cuprum", "Arial", sans-serif;
   color: black;
   background: white;
@@ -162,11 +156,18 @@ body {
   background-color: #000000;
 }
 
+.main-header {
+  margin-bottom: 45px;
 
-.header-up {
-  max-height: 42px;
+  color: #ffffff;
 
   background-color: #32425c;
+}
+
+.header-up {
+  float:left;
+  width: 940px;
+  max-height: 42px;
 }
 
 .header-up ul {
@@ -176,27 +177,48 @@ body {
   list-style: none;
   font-size: 0;
 }
+.header-up form{
+  padding: 8px 0px;
+  padding-left: 0px;
+}
+.header-up label {
+  padding-left: 50px;
+}
+.header-up input {
+  width: 160px;
+}
 
 .header-up li {
   display: inline-block;
   font-weight: 400;
 
-  font-size: 17px;
-  line-height: 18px;
+
+  font-size: 17px;/*проверено*/
+  line-height: 18px;/*проверено*/
   vertical-align: top;
 }
 
 .header-up a {
   display: block;
-  padding: 12px 32px;
+  text-align: center;
+  padding: 12px 0px;
+
 
   color: #ffffff;
   text-decoration: none;
+}
+.header-up .bookmark,
+.header-up .basket {
+  padding-left: 24px;
 }
 .header-up a:hover {
   background: #212a3a;
 }
 .header-up li:nth-child(1) {
+  font-weight: 400;
+
+  font-size: 24px;
+  line-height: 24px;
   text-align: center;
   width: 220px;
   background-color: #ee3643;
@@ -204,24 +226,29 @@ body {
 .header-up li:nth-child(1):hover {
   background-color: #ca2c37;
 }
-
-.header-up li:last-child{
+.header-up li:nth-child(4),
+.header-up li:nth-child(5) {
   float:right;
+  width: 150px;
+  padding: 0px 0px;
+}
+
+
+.header-up li:nth-child(3) {
+  float: right;
+  width: 150px;
+  text-align: center;
   background-color: #63a63e;
 }
-/**/
+
+
 .search,
 .bookmark,
 .basket {
   position: relative;
 
-  display: inline-block;
-  padding: 8px 15px;
-  padding-left: 40px;
 
-  font-size: 17px;
-  line-height: 18px;
-  vertical-align: top;
+
   color: #d4d6db;
   text-decoration: none;
 }
@@ -232,21 +259,35 @@ body {
   color: #ffffff;
   background-color: #212a3a;
 }
-
-.bookmark::before,
-.basket::before,
-.search::before{
+.search::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 7%;
+  left: 11%;
   transform: translate(-50%, -50%);
   width: 18px;
   height: 18px;
 
   background: url("../img/sprite1.png") no-repeat center;
   /* положение фона так, чтобы отображалась нужная иконка*/
-  background-position: -px -1px;
+  background-position: -1px -1px;
+  opacity: 1;
+}
+
+
+.bookmark::before,
+.basket::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left:18%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+
+  background: url("../img/sprite1.png") no-repeat center;
+  /* положение фона так, чтобы отображалась нужная иконка*/
+  background-position: -1px -1px;
   opacity: 1;
 }
 /* изменение непрозрачности
@@ -273,32 +314,48 @@ body {
 }
 
 .header-down {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
   min-height: 280px;
   background-color: #f1f5f7;
 }
 .header-down-one-info {
   float: left;
+  width: 24%;
+  padding: 0px;
+  margin-left: 50px;
+  margin-top: 32px;
+
+  font-size: 16px;/*проверено*/
+  line-height: 23px;/*проверено*/
+
+  font-style: italic;/*проверено*/
+  color: #ee434f;
+  border: 1px dotted #000000;
+}
+
+.header-down-one-contacts {
+  float: left;
   width: 33.33%;
-  font-size: 16px;
-  line-height: 23px;
-  vertical-align: top;
-  font-style: italic;
+  border: 1px dotted black;
+  height: 130px;
 
 }
- .info {
-  padding: 10px;
-  margin-left: 50px;
-  margin-top: 35px;
-  color: #ee434f;
-}
+
+
 .phone {
   position: relative;
-  width: 265px;
+  margin: 45px 45px;
+  margin-bottom: 0px;
+  width: 267px;
+  padding: 12px;
+  padding-left: 32px;
   font-size: 21px;/*проверено*/
   line-height: 18px;/*проверено*/
-  padding: 10px;
-  margin-left: 25px;
-  margin-top: 45px;
+
   min-height: 40px;
   vertical-align: top;
   text-align: center;
@@ -311,7 +368,7 @@ body {
   content:"";
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: 8%;
   transform: translate(-50%, -50%);
   background-image: url("../img/sprite1.png");
   background-repeat: no-repeat;
@@ -322,40 +379,49 @@ body {
   background-position: -10px -351px;
 }
 .address {
-  width: 265px;
-  margin-left: 25px;
-  font-weight: 400;
+  margin-top:4px;
+  margin-left: 40px;
   color: #657285;
   font-size: 14px;/*проверено*/
-  line-height: 24px;/*проверено*/
+  line-height: 16.8px;/*проверено*/
   font-family: "Cuprum", "Arial"sans-serif;
   vertical-align: top; /*вертикальное выравнивание для блочно-строчных кнопок*/
   text-align: center; /*выравнивание текста внутри по центру*/
-
-  border: 1px dotted #666666;
 }
 
-
-
-
-.header-down-one-contacts {
-  float: left;
-  width: 33.33%;
-
-}
 .header-down-one-user {
-  position: relative;
   float: right;
-  margin-top: 45px;
-  width: 283px;
-  min-height: 50px;
+  border: 1px dottted black;
 }
 
-.header-down-one-user::before{
+.enter
+ {
+  position: relative;
+  display: inline-block;
+
+  margin-top: 45px;
+
+/*
+  width: 0px;
+  min-height: 10px; */
+}
+
+.registration
+ {
+  position: relative;
+
+  margin-top: 45px;
+/*
+  width: 150px;
+  min-height: 10px; */
+}
+
+
+.enter::before{
   content:"";
   position: absolute;
   top: 50%;
-  left: 7%;
+  left: 18%;
   transform: translate(-50%, -50%);
   background-image: url("../img/sprite1.png");
   background-repeat: no-repeat;
@@ -394,8 +460,8 @@ body {
 
 
 .header-down-one-user a {
-  padding: 15px 29px;
 
+  padding: 12px 0px;
   font-weight: 400;
   text-transform: none;
   font-size: 21px;/* проверено */
@@ -406,11 +472,20 @@ body {
   text-transform: none;
   background-color: #ffffff;
 
+  border:1px solid black;
+
   color: black;
 }
 
+.header-down-one-user a:nth-child(1){
+  display: inline-block;
+  padding: 14px 26px;
+  padding-left: 45px;
+}
 .header-down-one-user a:nth-child(2){
   margin-right: 0px;
+  padding: 14px 23px;
+
 }
 
 
@@ -428,13 +503,14 @@ body {
 }
 
 .footer-up {
-  min-height: 140px;
+  min-height: 195px;
   background-color: #32425c;
 }
 
 
 .main-navigation {
   float: left;
+  margin-top: 22px;
   width: 940px;
   min-height: 60px;
   background-color: #32425c;
@@ -449,29 +525,23 @@ body {
 
 .main-navigation li {
   display: inline-block;
+
+  font-size: 17px;/* проверено */
+  line-height: 17px;/* проверено */
+  vertical-align: top; /* вертикальное выравнивание для блочно-строчных кнопок */
+
 }
 
 .main-navigation a {
   display: block;
-  padding: 22px 33.5px;
-
-  font-weight: 400;
-  text-transform: none;
-  font-size: 17px;/* проверено */
-  line-height: 17px;/* проверено */
-  font-family: "Cuprum","Arial", sans-serif;
-  vertical-align: top; /* вертикальное выравнивание для блочно-строчных кнопок */
-  text-align: center; /* выравнивание текста внутри кнопок по центру */
-  text-transform: none;
-
-
+  padding: 20px 36px;
   color: #ffffff;
   text-decoration: none;
 }
-.main-navigation a:nth-child(1) {
-  padding-left: px;
+/* .main-navigation a:nth-child(1) {
+  padding-left:53px;
+} */
 
-}
 
 .main-navigation a:hover {
   background: #293449;
@@ -483,41 +553,65 @@ body {
 
 
 .categories-block {
-  margin-top: 60px;
-  margin-bottom: 30px;
-  background-color: #9c8c75;
+  margin-top: 58px;
+  margin-bottom: 53px;
+
   min-height: 400px;
 }
 
-.catalog-block-cap,
+.catalog-block-cap{
+  min-height: 89px;
+  margin-bottom:0px;
+
+  text-align: center;
+  background-color: #f7f3ec;
+}
 .factory-block-cap {
-  margin-top: 25px;
-  margin-bottom:25px;
+  min-height: 89px;
+  margin-bottom:16px;
 
   text-align: center;
   background-color: #f7f3ec;
 }
 
 
-.popular-products,
-.popular-factory {
+.popular-products {
   float: left;
-  margin-left: 30px;
+  margin-left: 29px;
+  margin-top: 28px;
   font-weight: 400;
   text-transform: none;
   font-size: 30px;/* проверено */
   line-height: 30px;/* проверено */
-  font-family: "Cuprum","Arial", sans-serif;
-  color: #32425c;
 
-  border: 1px dotted #666666;
+  color: #32425c;
 }
 
-.all-products,
+.popular-factory {
+  float: left;
+  margin-left: 25px;
+  margin-top: 28px;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 30px;/* проверено */
+  line-height: 30px;/* проверено */
+
+  color: #32425c;
+}
+
+.all-products {
+  float: right;
+  margin-top: 25px;
+  margin-right: 23px;
+  border-radius: 3px;
+}
 .all-factory {
   float: right;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-right: 25px;
+  padding: 10px 68px;
+
+  border-radius: 3px;
 }
 
 
@@ -525,34 +619,18 @@ body {
 
 
 .catalog-block {
-  background-color: #f7c172;
-  min-height: 315px;
+  margin-bottom:15px;
+  min-height: 314px;
 }
 
 .factory-block {
-  background-color: #9c8c75;
   min-height: 400px;
 }
 
 .info-block {
-  background-color: #9c8c75;
   min-height: 535px;
 }
 
-
-
-.catalog .catalog-block-left {
-  float: left;
-  width: 220px;
-  background-color: #f7cd08;
-}
-
-.catalog .catalog-block-right {
-  float: left;
-  width: 700px;
-  margin-left: 20px;
-  background-color: #a77e42;
-}
 
 .footer-up-left {
   float: left;
@@ -561,13 +639,14 @@ body {
 
 .footer-up-right {
   float: right;
+  margin-top: 28px;
   width: 615px;
 }
 
 .categories-item {
   float: left;
   width: 300px;
-  height: 120px;
+  height: 123px;
   margin-right: 20px;
   margin-bottom: 20px;
   background-color: lightgreen;
@@ -577,7 +656,7 @@ body {
   content:"";
   position: absolute;
   top: 50%;
-  left: 75%;
+  left: 77%;
   transform: translate(-50%, -50%);
   background-image: url("../img/sprite2.png");
   background-repeat: no-repeat;
@@ -625,15 +704,17 @@ body {
 }
 .categories-item-big .name-category{
   padding-left: 24px;
-  padding-top:23px;
-  margin:0;
-  font-family: "Cuprum", "Arial", sans-serif;
+  padding-top: 23px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+
   font-size: 36px;/* проверено */
   line-height: 30px;/* проверено */
   font-weight: 700; /* проверено */
 }
-.categories-item-big .name-category p{
-
+.name-category p{
+  margin: 0;
+  padding: 0;
   font-family: "PT Sans", sans-serif;
 
   font-size: 18px;/* проверено */
@@ -669,7 +750,7 @@ body {
 .categories-item-big {
   float: left;
   width: calc(300px * 2 + 20px);
-  height: 260px;
+  height: 264px;
   margin-right: 20px;
   margin-bottom: 0;
   background-color: lightyellow;
@@ -685,10 +766,11 @@ body {
   font-weight: 400;
   position: relative;
 
-  margin: 90px 20px;
-  margin-bottom: 5p;
-  padding: 10px 45px;
+  margin: 130px 23px;
+  margin-bottom: 5px;
+  padding: 10px 50px;
   border-radius: 3px;
+
 }
 .categories-item .btn {
   font-size: 14px;/* проверено */
@@ -697,32 +779,38 @@ body {
   position: relative;
 
   width: 130px;
-  margin: 10px 20px;
+  margin:10px 25px;
   margin-bottom: 5px;
-  padding: 10px 0px;
+  padding: 10px 3px;
   border-radius: 3px;
-
-  background-color: ##dda028;/*как сделать прозрачную кнопку*/
+  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: ##dda028;как сделать прозрачную кнопку */
 }
 
 .categories-item .btn:hover{
-  opacity: 0.8
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .categories-item .btn:active{
-  opacity: 0.9
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .factory-item {
-  float: left;
+  float:left;
+
   min-width: 218px;
   min-height: 145px;
   margin-right: 20px;
   margin-bottom: 20px;
+
   text-align: center;
-  vertical-align: middle;
+  line-height:136px;
+  /* vertical-align: middle; */
   border: 1px solid #e7e7e7;
-  background-color: ;
+  background-color: #ffffff;
+}
+.factory-item img {
+  vertical-align: middle;
 }
 
 .factory-item:nth-child(4n) {
@@ -736,36 +824,59 @@ body {
 }
 
 .services-block {
-  padding-top: 60px;
-  min-height: 460px;
-  border: 5px solid black;
+  padding-top: 45px;
+  min-height: 472px;
+
+  font-size: 19px;/*не получается посмотреть*/
+  line-height: 24px;/*проверено*/
+
   background: url("../img/service.png") no-repeat center;
   background-color: #f2f6f8;
 }
-.service-block-one {
-  float: left;
-  width: 100%;
-  min-height: 170px;
-  border: 1px dotted black;
+.services-block-one-info,
+.service-block-delivery {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
 }
+.services-block-one-info h2 {
+  margin-top:12px;
+  margin-bottom: 23px;
 
-
-
-.services-block-one-info p{
-  width: 400px;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 28px;
+  line-height: 38px;
+}
+.services-block-one-info p {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 14.7px;/*не получается посмотреть*/
   line-height: 24px;
 }
+.service-block-delivery h2 {
+  margin-top:40px;
+  margin-bottom: 23px;
 
-
-.sevice-block-menu{
-  float: left;
-  margin-top: 120px;
-  width: 240px;
-  padding: 0px;
+  font-size: 34px;
+  line-height: 42px;
 }
-.sevice-block-menu ul {
+.service-block-delivery p {
+  margin: 0;
+  margin-bottom: 26px;
+  font-size: 14.3px;/*не получается посмотреть*/
+  line-height: 23px;
+}
+
+
+
+.service-block-menu {
+  float: left;
+
+  width: 240px;
+
+}
+.service-block-menu ul {
   margin: 0;
   padding: 0;
 
@@ -773,15 +884,15 @@ body {
   font-size: 0;
 }
 
-.sevice-block-menu li {
+.service-block-menu li {
   display: block;
 }
 
-.sevice-block-menu a {
+.service-block-menu a {
   min-width: 195px;
-  padding: 20px;
+  padding: 16px 20px;
   text-align:left;
-  font-family: "Cuprum", "Arial", sans-serif;
+
   font-weight: 700;/*проверено*/
   font-size: 21px;/*проверено*/
   line-height: 30px;/*проверено*/
@@ -792,6 +903,9 @@ body {
 
 
 }
+
+
+
 .sevice-block-menu a:hover {
   background: #293449;
 }
@@ -813,8 +927,10 @@ body {
   border: 1px dotted black;
 }
 
+
+
 .index-content {
-  margin-bottom: 35px;
+  margin-bottom: 0px;
   padding: 80px 120px;
 
   color: #000000;
@@ -830,7 +946,7 @@ body {
 
 .index-content-title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   font-size: 30px;
   line-height: 42px;
@@ -838,12 +954,13 @@ body {
 
 .index-content p {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   font-size: 14px;
   line-height: 24px;
 }
 
 .transport-companies {
+  margin-top: 30
   margin: 0;
   padding: 0;
   padding-right: 35px;
@@ -862,6 +979,14 @@ body {
 .map {
   margin-bottom: 40px;
 }
+.index-content-left .btn {
+
+  width: 110px;
+}
+.index-content-right .btn {
+  clear: both;
+  width: 63%;
+}
 
 
 .footer-up h1 {
@@ -870,12 +995,12 @@ body {
   display: inline-block;
   margin: 0;
   min-height: 60px;
-  font-weight: 400;
+
   font-size: 30px;
   line-height: 30px;
   background-color: #ee3643;
   padding: 20px 40px;/*внутренние отступы*/
-  font-family: "Cuprum", "Arial", sans-serif;
+
   vertical-align: top; /*вертикальное выравнивание для блочно-строчных кнопок*/
   text-align: center; /*выравнивание текста внутри кнопок по центру*/
   color: #ffffff;
@@ -889,8 +1014,7 @@ body {
 
 .footer-up p {
   float: left;
-  font-family: "Cuprum", sans-serif;
-  font-weight: 400;
+  margin-top:25px;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
@@ -898,9 +1022,16 @@ body {
   box-sizing: border-box;
 }
 
-.footer-navigation-one,
+.footer-navigation-one {
+  float: left;
+  padding-left: 65px;
+  width: 570px;
+  border: 2px dotted black;
+}
 .footer-navigation-two {
-  float: right;
+  float: left;
+  padding-left: 90px;
+  width: 570px;
   border: 2px dotted black;
 }
 .footer-navigation-one ul,
@@ -920,10 +1051,9 @@ body {
 
 }
 
-.footer-navigation-one a,
-.footer-navigation-two a {
+.footer-navigation-one a {
   display: block;
-  padding-left: 30px;
+  margin-right: 40px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -941,7 +1071,7 @@ body {
 }
 
 .footer-down {
-  padding-top: 60px;
+  padding-top: 35px;
   padding-bottom: 36px;
 
   font-size: 16px;
@@ -955,7 +1085,7 @@ body {
 .footer-contacts {
   float: left;
   width: 230px;
-  margin-right: 160px;
+  margin-right: 135px;
 
   border:1px dotted white;
 }
@@ -978,6 +1108,7 @@ body {
   width: 43px;
   height: 43px;
   margin: 0 2px;
+  border-radius:50%;
   font-size: 0;
   text-decoration: none;
   background-color: #212a3a;
@@ -1015,27 +1146,25 @@ body {
 .footer-mail-copyright {
   float: right;
 
-  max-width: 300px;
+  max-width: 350px;
   margin-right: 15px;
-
 }
-.mail{
+
+.mail {
   float: left;
-
-  margin-right: 50px;/*50px*/
-  border:1px dotted white;
+  margin-right: 50px;
 }
-.copyright{
+.copyright {
   float: right;
-  border:1px dotted whit;
+  /* border:1px dotted white; */
 }
 
 .footer-mail-copyright p {
   margin: 0;
-
-  margin-bottom: 15px;
+  padding: 0;
 }
 .footer-mail-copyright a {
+  margin: 0;
   color: #c6a771;
   text-decoration: none;
 }
