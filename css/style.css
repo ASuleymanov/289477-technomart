@@ -182,10 +182,10 @@ body {
   padding-left: 0px;
 }
 .header-up label {
-  padding-left: 50px;
+  padding-left: 15px;
 }
 .header-up input {
-  width: 160px;
+  width: 243px;
 }
 
 .header-up li {
@@ -242,29 +242,30 @@ body {
   background-color: #63a63e;
 }
 
-form{
+.form{
   background-color: #293449;
 }
 input{
-  height: 50%;
+  height: 100%;
   background-color: transparent;
   padding-left: 0px;
+
   border: none;
   position: relative;
-  height: 22px;
-  background-size: 20px;
+  height: 24px;
+  background-size: 75px;
   background-repeat: no-repeat;
   background-position: 5px 5px;
-  /* background-image: url(http://s1.iconbird.com/ico/0612/GooglePlusInterfaceIcons/w128h1281338911651zoom.png); */
+  background-image: url(../img/search.png);
   opacity: 0.7;
 }
-input:hover {
+.input:hover {
   opacity: 1;
   background-color: #ffffff;
 }
-label {
-/*   position: absolute;
-color: #fff; */
+.label {
+  position: absolute;
+  color: #fff;
   left: 50px;
   font-size: 17px;
   line-height: 18px;
@@ -279,7 +280,9 @@ input:focus + label {
   display: none;
 }
 input:focus {
-  background-image: url(Перфоратор);
+  background-size: 15px;
+  padding-left: 5px;
+  background-image: url(../img/search-red.png);
 }
 
 
@@ -302,7 +305,7 @@ input:focus {
   color: #ffffff;
   background-color: #212a3a;
 }
-.search::before {
+/* .search::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -312,10 +315,10 @@ input:focus {
   height: 18px;
 
   background: url("../img/sprite1.png") no-repeat center;
-  /* положение фона так, чтобы отображалась нужная иконка*/
+  положение фона так, чтобы отображалась нужная иконка
   background-position: -1px -1px;
   opacity: 1;
-}
+} */
 
 
 .bookmark::before,
@@ -340,11 +343,11 @@ input:focus {
 }
 
 
-.icon-search::before{
+/* .icon-search::before{
   width: 17px;
   height: 17px;
   background-position: -10px -390px;
-}
+} */
 .icon-bookmark::before{
   width: 14px;
   height: 16px;
@@ -377,13 +380,13 @@ input:focus {
 
   font-style: italic;/*проверено*/
   color: #ee434f;
-  border: 1px dotted #000000;
+
 }
 
 .header-down-one-contacts {
   float: left;
   width: 33.33%;
-  border: 1px dotted black;
+
   height: 130px;
 
 }
@@ -479,7 +482,7 @@ input:focus {
 активной кнопки по стайлгайду */
 .enter:hover,
 .registration:hover {
-  color: red;
+  color: #ee3643;
   background-color: #ffffff;
 }
 .enter:active,
@@ -515,7 +518,7 @@ input:focus {
   text-transform: none;
   background-color: #ffffff;
 
-  border:1px solid black;
+
 
   color: black;
 }
@@ -581,13 +584,9 @@ input:focus {
 }
 
 .main-navigation a {
-display: block;
-padding: 21px 33px;
-color: #ffffff;
-text-decoration: none;
-
   display: block;
-  padding: 21px 33px;
+  padding: 21px 33.6px;
+
   color: #ffffff;
 }
 
@@ -922,7 +921,7 @@ text-decoration: none;
   float: left;
   padding-left: 0;
   padding-top: 20px;
-  width: 240px;
+  width: 242px;
 
 }
 .service-block-menu ul {
@@ -941,6 +940,9 @@ text-decoration: none;
   min-width: 195px;
   padding: 16px 20px;
   text-align:left;
+  margin-bottom: -1px;
+  border: 1px solid #293449;
+
 
   font-weight: 700;/*проверено*/
   font-size: 21px;/*проверено*/
@@ -949,22 +951,33 @@ text-decoration: none;
 
   color: #ffffff;
   background-color: #32425c;
-
-
 }
 
 
 
-.sevice-block-menu a:hover {
+
+
+.service-block-menu a:hover {
   background: #293449;
 }
-
-.sevice-block-menu a:active {
+.service-block-menu .active {
+  color: #32425c;
+  background-color: #ffffff;
+  border: none;
+}
+.service-block-menu .active:hover {
+  color: #ffffff;
+  background: #293449;
+  border: 1px solid #293449;
+}
+.service-block-menu a:active {
   color: #32425c;
   background-color: #ffffff;
 }
 
 
+
+/*
 .service-block-three {
   float: right;
   margin-right: 343px;
@@ -973,7 +986,7 @@ text-decoration: none;
   font-size: 14px;
   line-height: 24px;
 
-}
+} */
 
 
 
@@ -982,6 +995,7 @@ text-decoration: none;
   margin-bottom: 0px;
   padding: 72px 120px;
 
+  height: 395px;
   color: #000000;
 }
 .index-content-left {
@@ -1007,29 +1021,54 @@ text-decoration: none;
   font-size: 14px;
   line-height: 24px;
 }
-
-.transport-companies {
-  margin-top: 30
-  margin: 0;
-  padding: 0;
-  padding-right: 35px;
-
-  list-style: none;
+.index-content ul {
+  margin: 0px;
+  padding: 0px;
 }
 
-.transport-companies li {
-  padding-left: 35px;
-  margin-bottom: 20px;
-}
 .transport-companies li:nth-child(3) {
   margin-bottom: 40px;
 }
+
+/* Особые стили для контентных тегов */
+
+.transport-companies .line-flex {
+  display: flex;
+  align-items: center;
+
+  margin-top:16px;
+  margin-bottom: 0px;
+
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.transport-companies .line-flex::before {
+  content: '';
+
+  flex-grow: 20px;
+
+  width: 25px;
+  height: 2px;
+  background: red;
+}
+
+.transport-companies .line-flex::before {
+  margin-right: 10px;
+}
+
+/* .transport-companies .line-flex::after {
+  margin-left: 20px;
+} */
+
+
+
 
 .map {
   margin-bottom: 40px;
 }
 .index-content-left .btn {
-
   padding: 8px 45px;
 }
 .index-content-right .btn {
@@ -1055,6 +1094,7 @@ text-decoration: none;
   color: #ffffff;
   text-decoration: none;
   box-sizing: border-box;
+  cursor: pointer
 }
 
 .footer-up-left h1:hover {
@@ -1067,7 +1107,7 @@ text-decoration: none;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
-  border: 1px dotted #666666;
+
   box-sizing: border-box;
 }
 .footer-up-right
@@ -1084,7 +1124,7 @@ text-decoration: none;
   float: right;
   margin: 0;
   margin-bottom: 0px;
-  border: 2px dotted black;
+
 }
 .footer-navigation-one li {
   display: inline-block;
@@ -1107,7 +1147,7 @@ text-decoration: none;
   float: right;
   padding: 0;
   width: 520px;
-  border: 2px dotted black;
+
 }
 
 .footer-navigation-two li {
@@ -1124,7 +1164,7 @@ text-decoration: none;
 .footer-navigation-two a {
   padding
   text-decoration: none;
-  color: #92856d;
+  color: #ffd180;
 }
 
 .footer-navigation-one a:hover,
@@ -1152,7 +1192,6 @@ text-decoration: none;
   width: 230px;
   margin-right: 135px;
 
-  border:1px dotted white;
 }
 
 .footer-social {
@@ -1221,7 +1260,6 @@ text-decoration: none;
 }
 .copyright {
   float: right;
-  /* border:1px dotted white; */
 }
 
 .footer-mail-copyright p {
@@ -1230,7 +1268,7 @@ text-decoration: none;
 }
 .footer-mail-copyright a {
   margin: 0;
-  color: #c6a771;
+  color: #ffd180;
   text-decoration: none;
 }
 
